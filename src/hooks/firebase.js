@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect } from 'react'
 import * as firebase from 'firebase'
 import 'firebase/firestore'
 
@@ -19,11 +19,11 @@ function useScoreboard (id) {
   // initialize our default state
   const [error, setError] = React.useState(false)
   const [loading, setLoading] = React.useState(true)
-  const [goldCount, setGoldCount] = useState([0])
-  const [blueCount, setBlueCount] = useState([0])
-  const [activeSet, setActiveSet] = useState(0)
-  const [topName, setTopName] = useState('BLUE')
-  const [bottomName, setBottomName] = useState('GOLD')
+  const [goldCount, setGoldCount] = React.useState([0])
+  const [blueCount, setBlueCount] = React.useState([0])
+  const [activeSet, setActiveSet] = React.useState(0)
+  const [topName, setTopName] = React.useState('BLUE')
+  const [bottomName, setBottomName] = React.useState('GOLD')
 
   // when the id attribute changes (including mount)
   // subscribe to the recipe document and update
@@ -68,4 +68,4 @@ function useScoreboard (id) {
   }
 }
 
-export { useScoreboard }
+export { useScoreboard, firebase }

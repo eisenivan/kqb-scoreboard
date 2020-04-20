@@ -1,5 +1,5 @@
 import React from 'react'
-import { useScoreboard } from './hooks/firebase'
+import { useScoreboard, firebase } from './hooks/firebase'
 import './App.css'
 
 const ScoreItem = ({ value }) => (
@@ -39,25 +39,83 @@ const ScoreBoard = ({ goldCount, blueCount, activeSet, topName, bottomName }) =>
 
 function App () {
   const { loading, goldCount, blueCount, activeSet, topName, bottomName } = useScoreboard('1234')
+  console.log(goldCount, blueCount, activeSet)
 
-  // console.log(loading, goldCount, blueCount, activeSet, topName, bottomName)
+  const reset = async () => {
+    const ref = firebase.firestore().collection('scoreboards').doc('1234')
+    await ref.set({
+      topName: 'BLUE',
+      bottomName: 'GOLD',
+      goldCount: [0],
+      blueCount: [0],
+      activeSet: 0
+    })
+  }
 
-  // const newSet = () => {
-  //   setGoldCount([...goldCount, 0])
-  //   setBlueCount([...blueCount, 0])
-  //   setActiveSet(blueCount.length)
-  // }
+  const newSet = async () => {
+    const ref = firebase.firestore().collection('scoreboards').doc('1234')
+    await ref.set({
+      topName,
+      bottomName,
+      goldCount: [...goldCount, 0],
+      blueCount: [...blueCount, 0],
+      activeSet: blueCount.length
+    })
+  }
 
-  // const removeSet = () => {
-  //   goldCount.pop()
-  //   blueCount.pop()
-  //   setGoldCount([...goldCount])
-  //   setBlueCount([...blueCount])
-  //   setActiveSet(activeSet - 1)
-  // }
+  const removeSet = async () => {
+    goldCount.pop()
+    blueCount.pop()
+
+    const ref = firebase.firestore().collection('scoreboards').doc('1234')
+    await ref.set({
+      topName,
+      bottomName,
+      goldCount: [...goldCount],
+      blueCount: [...blueCount],
+      activeSet: activeSet - 1
+    })
+  }
+
+  const setActiveSet = async (setIndex) => {
+    const ref = firebase.firestore().collection('scoreboards').doc('1234')
+    await ref.set({
+      topName,
+      bottomName,
+      goldCount: [...goldCount],
+      blueCount: [...blueCount],
+      activeSet: setIndex
+    })
+  }
 
   return (
     <div className='App'>
+
+      <div className='ControlContainer'>
+        {/* <div className='ControlBox'>
+          <h2>TEAM CONTROLS</h2>
+          <div className='TeamBox'>
+            <input value={topName} onChange={(e) => setTopName(e.target.value)} />
+            <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
+            <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
+          </div>
+
+          <div className='TeamBox'>
+            <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
+            <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
+            <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
+          </div>
+        </div> */}
+
+        <div className='ControlBox'>
+          <h2>SET CONTROLS</h2>
+          <button onClick={() => setActiveSet(activeSet - 1)}>{'<<'}</button>
+          <button onClick={() => newSet()}>Add Set</button>
+          <button onClick={() => removeSet()}>Remove Set</button>
+          <button onClick={() => setActiveSet(activeSet + 1)}>{'>>'}</button>
+          <button onClick={() => reset()}>Reset</button>
+        </div>
+      </div>
 
       { !loading
         ? <ScoreBoard
@@ -67,7 +125,7 @@ function App () {
           topName={topName}
           bottomName={bottomName}
         />
-        : null }
+        : <h2>Loading...</h2> }
 
     </div>
   )
