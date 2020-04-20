@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import QRCode from 'react-qr-code'
+import Draggable from 'react-draggable'
 import { useScoreboard } from './hooks/firebase'
 import './App.css'
 
@@ -34,6 +35,11 @@ function App (props) {
   const { loading, error, goldCount, blueCount, activeSet, topName, bottomName } = useScoreboard(scoreboardId)
   const [hideQr, setHideQr] = useState(false)
 
+  const [hideSourceOnDrag, setHideSourceOnDrag] = useState(true)
+  const toggle = useCallback(() => setHideSourceOnDrag(!hideSourceOnDrag), [
+    hideSourceOnDrag
+  ])
+
   if (error.status) {
     return (<Redirect to='/' />)
   }
@@ -41,13 +47,21 @@ function App (props) {
   return (
     <div className='App App__center'>
       { !loading
-        ? <ScoreBoard
-          goldCount={goldCount}
-          blueCount={blueCount}
-          activeSet={activeSet}
-          topName={topName}
-          bottomName={bottomName}
-        />
+        ? (
+          <Draggable>
+            <div>
+              <ScoreBoard
+                goldCount={goldCount}
+                blueCount={blueCount}
+                activeSet={activeSet}
+                topName={topName}
+                bottomName={bottomName}
+                onChange={toggle}
+              />
+            </div>
+          </Draggable>
+
+        )
         : <h2>Loading...</h2> }
       { !hideQr ? (
         <div className='QrBox'>

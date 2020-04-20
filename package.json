@@ -8,7 +8,9 @@
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.14.1",
     "react": "^16.13.1",
+    "react-dnd-html5-backend": "^10.0.2",
     "react-dom": "^16.13.1",
+    "react-draggable": "^4.3.1",
     "react-qr-code": "^1.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"
@@ -18,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && surge ./build --domain kqb.eisenberg.ninja"
+    "deploy": "yarn build && firebase deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
