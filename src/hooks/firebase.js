@@ -37,12 +37,16 @@ function useScoreboard (id) {
         .onSnapshot(
           rawDoc => {
             const doc = rawDoc.data()
-            setLoading(false)
-            setGoldCount(doc.goldCount)
-            setBlueCount(doc.blueCount)
-            setActiveSet(doc.activeSet)
-            setTopName(doc.topName)
-            setBottomName(doc.bottomName)
+            if (doc) {
+              setLoading(false)
+              setGoldCount(doc.goldCount)
+              setBlueCount(doc.blueCount)
+              setActiveSet(doc.activeSet)
+              setTopName(doc.topName)
+              setBottomName(doc.bottomName)
+            } else {
+              setError({ status: true, msg: 'Invalid key' })
+            }
           },
           err => {
             setError(err)
