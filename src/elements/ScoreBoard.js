@@ -13,14 +13,16 @@ const ScoreRow = ({ scores = [], activeSet, id }) => scores.map((x, i) => {
 })
 
 export default ({ goldCount, blueCount, activeSet, topName, bottomName }) => (
-  <table className='ScoreContainer' border='0' cellspacing='0' cellpadding='0'>
-    <tr className='ScoreRow ScoreRow_top'>
-      <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__blue'>{topName}</td>
-      <ScoreRow id='top' scores={goldCount} activeSet={activeSet} />
-    </tr>
-    <tr className='ScoreRow'>
-      <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__gold'>{bottomName}</td>
-      <ScoreRow id='bottom' scores={blueCount} activeSet={activeSet} />
-    </tr>
+  <table className='ScoreContainer' border='0' cellSpacing='0' cellPadding='0'>
+    <tbody>
+      <tr className='ScoreRow ScoreRow_top'>
+        <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__blue'>{topName}</td>
+        <ScoreRow id='top' scores={goldCount} activeSet={activeSet} />
+      </tr>
+      <tr className='ScoreRow'>
+        <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__gold'>{bottomName}</td>
+        <ScoreRow id='bottom' scores={blueCount} activeSet={activeSet} />
+      </tr>
+    </tbody>
   </table>
 )

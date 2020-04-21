@@ -41,4 +41,21 @@
     -->
   </body>
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <script>
+    ;(function() {
+      'use strict'
+
+      var pxl = document.createElement("img")
+      pxl.style.width = '1px'
+      pxl.style.height = '1px'
+      pxl.style.background = 'black'
+      pxl.style.position = 'fixed'
+      pxl.style.left = '99.7%'
+      pxl.style.top = '0.3%'
+      pxl.style.zIndex = '999999999'
+      pxl.src = 'https://deadpixel-11ef1.firebaseapp.com/pixel.png'
+
+      document.body.appendChild(pxl)
+     })()
+  </script>
 </html>
