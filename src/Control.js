@@ -8,7 +8,10 @@ const defaultData = {
   bottomName: 'GOLD',
   goldCount: [0],
   blueCount: [0],
-  activeSet: 0
+  activeSet: 0,
+  topText: '',
+  bottomText: '',
+  titleText: 'IGL Spring Circuit West: Snailor Moon vs. Better Berry Boys'
 }
 
 const ScoreItem = ({ value }) => (
@@ -26,11 +29,11 @@ const ScoreRow = ({ scores = [], activeSet, id }) => scores.map((x, i) => {
 const ScoreBoard = ({ goldCount, blueCount, activeSet, topName, bottomName }) => (
   <div className='ScoreContainer'>
     <div className='ScoreRow ScoreRow_top'>
-      <h3 className='ScoreRow_heading ScoreRow_heading-blue'>{topName}</h3>
+      <h3 className='ScoreRow_heading ScoreRow_heading-black'>{topName}</h3>
       <ScoreRow id='top' scores={goldCount} activeSet={activeSet} />
     </div>
     <div className='ScoreRow'>
-      <h3 className='ScoreRow_heading ScoreRow_heading-gold'>{bottomName}</h3>
+      <h3 className='ScoreRow_heading ScoreRow_heading-black'>{bottomName}</h3>
       <ScoreRow id='bottom' scores={blueCount} activeSet={activeSet} />
     </div>
   </div>

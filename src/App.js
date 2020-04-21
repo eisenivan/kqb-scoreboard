@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import QRCode from 'react-qr-code'
 import Draggable from 'react-draggable'
@@ -11,28 +11,38 @@ const ScoreItem = ({ value }) => (
 
 const ScoreRow = ({ scores = [], activeSet, id }) => scores.map((x, i) => {
   return (
-    <div key={`${id}-${i}`} className={activeSet === i ? 'ActiveColumn' : ''}>
+    <td key={`${id}-${i}`} className={activeSet === i ? 'ActiveColumn' : ''}>
       <ScoreItem value={x} />
-    </div>
+    </td>
   )
 })
 
 const ScoreBoard = ({ goldCount, blueCount, activeSet, topName, bottomName }) => (
-  <div className='ScoreContainer'>
-    <div className='ScoreRow ScoreRow_top'>
-      <h3 className='ScoreRow_heading ScoreRow_heading-blue'>{topName}</h3>
+  <table className='ScoreContainer' border='0' cellspacing='0' cellpadding='0'>
+    <tr className='ScoreRow ScoreRow_top'>
+      <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__blue'>{topName}</td>
       <ScoreRow id='top' scores={goldCount} activeSet={activeSet} />
-    </div>
-    <div className='ScoreRow'>
-      <h3 className='ScoreRow_heading ScoreRow_heading-gold'>{bottomName}</h3>
+    </tr>
+    <tr className='ScoreRow'>
+      <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__gold'>{bottomName}</td>
       <ScoreRow id='bottom' scores={blueCount} activeSet={activeSet} />
-    </div>
-  </div>
+    </tr>
+  </table>
 )
 
 function App (props) {
   const { id: scoreboardId } = useParams()
-  const { loading, error, goldCount, blueCount, activeSet, topName, bottomName } = useScoreboard(scoreboardId)
+  const {
+    loading,
+    error,
+    goldCount,
+    blueCount,
+    activeSet,
+    topName,
+    bottomName,
+    announcement
+  } = useScoreboard(scoreboardId)
+
   const [hideQr, setHideQr] = useState(false)
 
   const [hideSourceOnDrag, setHideSourceOnDrag] = useState(true)
@@ -64,11 +74,23 @@ function App (props) {
         )
         : <h2>Loading...</h2> }
       { !hideQr ? (
-        <div className='QrBox'>
-          <a rel='noopener noreferrer' target='_blank' href={`${window.location.href}/control`}>Control Panel</a>
-          <QRCode value={`${window.location.href}/control`} size={96} />
-          <button onClick={() => setHideQr(true)}>Hide QR Code</button>
-        </div>
+        <Draggable>
+          <div className='QrBox' style={{ cursor: 'pointer' }}>
+            <a rel='noopener noreferrer' target='_blank' href={`${window.location.href}/control`}>Control Panel</a>
+            <QRCode value={`${window.location.href}/control`} size={96} />
+            <button onClick={() => setHideQr(true)}>Hide QR Code</button>
+          </div>
+        </Draggable>
+      ) : null }
+
+      { announcement ? (
+        <Draggable>
+          <div className='QrBox' style={{ cursor: 'pointer' }}>
+            <a rel='noopener noreferrer' target='_blank' href={`${window.location.href}/control`}>Control Panel</a>
+            <QRCode value={`${window.location.href}/control`} size={96} />
+            <button onClick={() => setHideQr(true)}>Hide QR Code</button>
+          </div>
+        </Draggable>
       ) : null }
     </div>
   )
