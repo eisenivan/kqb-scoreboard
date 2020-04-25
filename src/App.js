@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import QRCode from 'react-qr-code'
 import Draggable from 'react-draggable'
@@ -16,15 +16,14 @@ function App (props) {
     activeSet,
     topName,
     bottomName,
-    announcement
+    title,
+    showTitle,
+    announcement,
+    showInfo,
+    info
   } = useScoreboard(scoreboardId)
 
   const [hideQr, setHideQr] = useState(false)
-
-  const [hideSourceOnDrag, setHideSourceOnDrag] = useState(true)
-  const toggle = useCallback(() => setHideSourceOnDrag(!hideSourceOnDrag), [
-    hideSourceOnDrag
-  ])
 
   if (error.status) {
     return (<Redirect to='/' />)
@@ -36,14 +35,17 @@ function App (props) {
         ? (
           <Draggable>
             <div style={{ cursor: 'pointer' }}>
-              <ScoreBoard
-                goldCount={goldCount}
-                blueCount={blueCount}
-                activeSet={activeSet}
-                topName={topName}
-                bottomName={bottomName}
-                onChange={toggle}
-              />
+            <ScoreBoard
+              goldCount={goldCount}
+              blueCount={blueCount}
+              activeSet={activeSet}
+              topName={topName}
+              bottomName={bottomName}
+              showTitle={showTitle}
+              title={title}
+              showInfo={showInfo}
+              info={info}
+            />
             </div>
           </Draggable>
 

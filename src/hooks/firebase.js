@@ -24,6 +24,10 @@ function useScoreboard (id) {
   const [activeSet, setActiveSet] = React.useState(0)
   const [topName, setTopName] = React.useState('BLUE')
   const [bottomName, setBottomName] = React.useState('GOLD')
+  const [title, setTitle] = React.useState(null)
+  const [showTitle, setShowTitle] = React.useState(false)
+  const [info, setInfo] = React.useState(null)
+  const [showInfo, setShowInfo] = React.useState(false)
 
   // when the id attribute changes (including mount)
   // subscribe to the recipe document and update
@@ -44,6 +48,10 @@ function useScoreboard (id) {
               setActiveSet(doc.activeSet)
               setTopName(doc.topName)
               setBottomName(doc.bottomName)
+              setTitle(doc.title)
+              setShowTitle(doc.showTitle)
+              setInfo(doc.info)
+              setShowInfo(doc.showInfo)
             } else {
               setError({ status: true, msg: 'Invalid key' })
             }
@@ -68,7 +76,11 @@ function useScoreboard (id) {
     blueCount,
     activeSet,
     topName,
-    bottomName
+    bottomName,
+    title,
+    showTitle,
+    info,
+    showInfo
   }
 }
 

@@ -9,7 +9,9 @@ const defaultData = {
   bottomName: 'GOLD',
   goldCount: [0],
   blueCount: [0],
-  activeSet: 0
+  activeSet: 0,
+  showTitle: false,
+  title: ''
 }
 
 const increment = (arr, activeSet) => {
@@ -25,7 +27,19 @@ const decrement = (arr, activeSet) => {
 function App (props) {
   const { id: scoreboardId } = useParams()
   const ref = firebase.firestore().collection('scoreboards').doc(scoreboardId)
-  const { loading, error, goldCount, blueCount, activeSet, topName, bottomName } = useScoreboard(scoreboardId)
+  const {
+    loading,
+    error,
+    goldCount,
+    blueCount,
+    activeSet,
+    topName,
+    bottomName,
+    title,
+    showTitle,
+    showInfo,
+    info
+  } = useScoreboard(scoreboardId)
 
   if (error.status) {
     return (<Redirect to='/' />)
@@ -39,6 +53,10 @@ function App (props) {
   const setBottomName = async (value) => ref.update({ bottomName: value })
   const setGoldCount = async (value) => ref.update({ goldCount: value })
   const setBlueCount = async (value) => ref.update({ blueCount: value })
+  const setShowTitle = async (value) => ref.update({ showTitle: value })
+  const setTitle = async (value) => ref.update({ title: value })
+  const setShowInfo = async (value) => ref.update({ showInfo: value })
+  const setInfo = async (value) => ref.update({ info: value })
 
   const newSet = async () => {
     await ref.update({
@@ -95,6 +113,22 @@ function App (props) {
           <button onClick={() => newSet()}>Add Set</button>
           <button onClick={() => removeSet()}>Remove Set</button>
           <button onClick={() => setActiveSet(activeSet + 1)}>{'>>'}</button>
+          <br /><br />
+          <div>
+            <label>Show title
+              <input name="showTitle" type="checkbox" checked={typeof showTitle !== 'undefined' ? showTitle : false} onChange={(e) => setShowTitle(e.target.checked)} />
+            </label>
+            <br /><br />
+            <input value={title ? title : ''} onChange={(e) => setTitle(e.target.value)} />
+          </div>
+          <br /><br />
+          <div>
+            <label>Show Info
+              <input name="showInfo" type="checkbox" checked={typeof showInfo !== 'undefined' ? showInfo : false} onChange={(e) => setShowInfo(e.target.checked)} />
+            </label>
+            <br /><br />
+            <input value={info ? info : ''} onChange={(e) => setInfo(e.target.value)} />
+          </div>
         </div>
       </div>
 
@@ -107,6 +141,10 @@ function App (props) {
             activeSet={activeSet}
             topName={topName}
             bottomName={bottomName}
+            showTitle={showTitle}
+            title={title}
+            showInfo={showInfo}
+            info={info}
           />
           <button onClick={() => reset()}>Reset</button>
         </>
