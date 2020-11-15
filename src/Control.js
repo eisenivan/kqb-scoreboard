@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import ScoreBoard from './elements/FullScoreBoard'
 import { useScoreboard, firebase } from './hooks/firebase'
@@ -6,12 +6,17 @@ import './App.css'
 
 const defaultData = {
   topName: 'BLUE',
+  topLogo: '',
   bottomName: 'GOLD',
-  goldCount: [0],
-  blueCount: [0],
+  bottomLogo: '',
+  goldCount: [0, 0, 0, 0, 0],
+  blueCount: [0, 0, 0, 0, 0],
   activeSet: 0,
+  showLogos: false,
   showTitle: false,
-  title: ''
+  showInfo: false,
+  title: '',
+  info: ''
 }
 
 const increment = (arr, activeSet) => {
@@ -25,6 +30,16 @@ const decrement = (arr, activeSet) => {
 }
 
 function App (props) {
+  const [teams, setTeams] = useState([])
+
+  useEffect(() => {
+    window.fetch('/teams.json')
+      .then(res => res.json())
+      .then((data) => {
+        setTeams(data)
+      })
+  }, [])
+
   const { id: scoreboardId } = useParams()
   const ref = firebase.firestore().collection('scoreboards').doc(scoreboardId)
   const {
@@ -34,27 +49,31 @@ function App (props) {
     blueCount,
     activeSet,
     topName,
+    topLogo,
     bottomName,
+    bottomLogo,
+    showLogos,
     title,
     showTitle,
-    showInfo,
-    info
+    info,
+    showInfo
   } = useScoreboard(scoreboardId)
 
   if (error.status) {
     return (<Redirect to='/' />)
   }
 
-  const teams = []
-
   const reset = async () => {
     await ref.set(defaultData)
   }
 
   const setTopName = async (value) => ref.update({ topName: value })
+  const setTopLogo = async (value) => ref.update({ topLogo: value })
   const setBottomName = async (value) => ref.update({ bottomName: value })
+  const setBottomLogo = async (value) => ref.update({ bottomLogo: value })
   const setGoldCount = async (value) => ref.update({ goldCount: value })
   const setBlueCount = async (value) => ref.update({ blueCount: value })
+  const setShowLogos = async (value) => ref.update({ showLogos: value })
   const setShowTitle = async (value) => ref.update({ showTitle: value })
   const setTitle = async (value) => ref.update({ title: value })
   const setShowInfo = async (value) => ref.update({ showInfo: value })
@@ -91,22 +110,64 @@ function App (props) {
     })
   }
 
+  const setTeamOneData = async (teamJson) => {
+    const teamData = JSON.parse(teamJson)
+    await ref.update({ topName: teamData.name })
+    await ref.update({ topLogo: teamData.logo })
+    await ref.update({ title: teamData.record })
+  }
+
+  const setTeamTwoData = async (teamJson) => {
+    const teamData = JSON.parse(teamJson)
+    await ref.update({ bottomName: teamData.name })
+    await ref.update({ bottomLogo: teamData.logo })
+    await ref.update({ info: teamData.record })
+  }
+
   return (
     <div className='App'>
       <div className='ControlContainer disable-dbl-tap-zoom'>
         <div className='ControlBox'>
           <h2>TEAM CONTROLS</h2>
           <div className='TeamBox'>
-            <input value={topName} onChange={(e) => setTopName(e.target.value)} />
-            <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
-            <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
+            <div>
+              <select onChange={(e) => setTeamOneData(e.target.value)}>
+                <option>-- Populate Top Team --</option>
+                { teams.map((team) => (
+                  <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
+                )) }
+              </select>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img width='36px' src={topLogo} alt='team1 logo' />
+              <input value={topName} onChange={(e) => setTopName(e.target.value)} />
+              <input value={topLogo} placeholder='optional logo url' onChange={(e) => setTopLogo(e.target.value)} />
+              <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
+              <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
+            </div>
           </div>
 
           <div className='TeamBox'>
-            <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
-            <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
-            <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img width='36px' src={bottomLogo} alt='team1 logo' />
+              <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
+              <input value={bottomLogo} placeholder='optional logo url' onChange={(e) => setBottomLogo(e.target.value)} />
+              <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
+              <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
+            </div>
+            <div>
+              <select onChange={(e) => setTeamTwoData(e.target.value)}>
+                <option>-- Populate Bottom Team --</option>
+                { teams.map((team) => (
+                  <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
+                )) }
+              </select>
+            </div>
           </div>
+          <label>
+            Show logos
+            <input name='showLogos' type='checkbox' checked={typeof showLogos !== 'undefined' ? showLogos : false} onChange={(e) => setShowLogos(e.target.checked)} />
+          </label>
         </div>
 
         <div className='ControlBox'>

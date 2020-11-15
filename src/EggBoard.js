@@ -21,7 +21,10 @@ function App (props) {
     showTitle,
     announcement,
     showInfo,
-    info
+    info,
+    topLogo,
+    bottomLogo,
+    showLogos
   } = useScoreboard(scoreboardId)
 
   const [hideQr, setHideQr] = useState(false)
@@ -46,6 +49,9 @@ function App (props) {
                 title={title}
                 showInfo={showInfo}
                 info={info}
+                topLogo={topLogo}
+                bottomLogo={bottomLogo}
+                showLogos={showLogos}
               />
             </div>
           </Draggable>

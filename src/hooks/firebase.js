@@ -23,8 +23,11 @@ function useScoreboard (id) {
   const [blueCount, setBlueCount] = React.useState([0])
   const [activeSet, setActiveSet] = React.useState(0)
   const [topName, setTopName] = React.useState('BLUE')
+  const [topLogo, setTopLogo] = React.useState('')
   const [bottomName, setBottomName] = React.useState('GOLD')
+  const [bottomLogo, setBottomLogo] = React.useState('')
   const [title, setTitle] = React.useState(null)
+  const [showLogos, setShowLogos] = React.useState(false)
   const [showTitle, setShowTitle] = React.useState(false)
   const [info, setInfo] = React.useState(null)
   const [showInfo, setShowInfo] = React.useState(false)
@@ -47,7 +50,10 @@ function useScoreboard (id) {
               setBlueCount(doc.blueCount)
               setActiveSet(doc.activeSet)
               setTopName(doc.topName)
+              setTopLogo(doc.topLogo)
               setBottomName(doc.bottomName)
+              setBottomLogo(doc.bottomLogo)
+              setShowLogos(doc.showLogos)
               setTitle(doc.title)
               setShowTitle(doc.showTitle)
               setInfo(doc.info)
@@ -76,7 +82,10 @@ function useScoreboard (id) {
     blueCount,
     activeSet,
     topName,
+    topLogo,
     bottomName,
+    bottomLogo,
+    showLogos,
     title,
     showTitle,
     info,

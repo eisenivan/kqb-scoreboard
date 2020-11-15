@@ -1,202 +1,352 @@
 [
   {
-    "name": "Gen 10 for a Good Time",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f57cd5d9ddf880015de05cf?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=2TJO8o8rrVSKkz1uQBArq%2FAiLcY%3D"
-  },
-  {
-    "name": "Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang ",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f655af777aeaf0015268550?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=EUOvYRCSPK8LsHNQ9EOoldRplA0%3D"
-  },
-  {
-    "name": "Bee-FFs",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f50ed93bbdae30015a6d158?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=H%2BGJZjrN2TsLI0arval0JyVtdXw%3D"
-  },
-  {
-    "name": "My Whole Stack",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f446810564d38001528f951?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=5ONIQiyBng2Po6N%2FDUkzxtd9EZ4%3D"
-  },
-  {
-    "name": "To Bean or Not To Bean",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f694c230fe9200015861350?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=RxebXCt%2B2%2BQPM9P2wx4s%2BLZLHXw%3D"
-  },
-  {
-    "name": "OnlyFlaps",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f627842ae36730015e5b085?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=fcpy%2F8EvcVajPrJd6UWqxxJOSqI%3D"
-  },
-  {
-    "name": "Whisky Beesness",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f55ab8aa3972b001551b52b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=VM%2Fxn2sDo9OCuJbEWvXwqEtwWe0%3D"
-  },
-  {
-    "name": "Penguin Peeps",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5a957a28e96b0015a9f8dc?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=fDl1a9vG%2F3UmtuLFMI%2B328GN%2BWY%3D"
-  },
-  {
-    "name": "Honeys of the Hive",
-    "logo": null
-  },
-  {
-    "name": "Gas Station Pizza Party",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5f8c5cf145ea00150333af?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=xonOykWnkGcd4Rrr31PJttnZ6Ik%3D"
-  },
-  {
-    "name": "ANALYZE. STRATEGIZE. SUCCEED.",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5c399a550195001576e096?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=3nbAVvjWMVhSN9afGYSab3U87M8%3D"
-  },
-  {
-    "name": "This Is Your Queen?",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f63331de748ec001547cb49?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=6j3rtIqbLcsQ5h58w0J70qc3kfI%3D"
-  },
-  {
-    "name": "Tear Bears",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5fc809f145ea0015034c52?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=I6II1XDXgoHJ71plt61sfOILoLo%3D"
-  },
-  {
-    "name": "Yeethaüs",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6400dacf665f00152db6b7?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=4NSgoceXJBZqBuHveZ8qUF7IiYY%3D"
-  },
-  {
-    "name": "Absolutely Crazy About Beans",
-    "logo": null
-  },
-  {
-    "name": "QuaranQueen",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6379364dee8000158839e1?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=S0OD941CsKnysaKNvcig6RDYIwk%3D"
-  },
-  {
-    "name": "Hivemates",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f677624ffd9360015218444?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=eYZqgnPD59nDum6gw%2F6aua%2B6VMM%3D"
-  },
-  {
-    "name": "Dunkaroos",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6a97b110c01800158abe04?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=4sKnlyJUIM4mzvQZlvm%2FvTa2fhE%3D"
-  },
-  {
-    "name": "Berry Brethren",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f58f0c51bab4100155c58ea?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=REcv%2Fg0%2BjUmi9wooXy9bNt5oqW4%3D"
-  },
-  {
-    "name": "Forming, Storming, Norming, and SWARMING",
-    "logo": null
-  },
-  {
-    "name": "Eat Toast House Flippers",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f45b26382188900156d7e58?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=xOQ%2BFH1xhxamvUrHyfPkTiOkeAs%3D"
-  },
-  {
-    "name": "D.E.S.K. Duty",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6bb9421cf5d60015c64a4d?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=RpNSeL53YnX2MHJdYoDJNe64B%2BQ%3D"
-  },
-  {
-    "name": "Dame Nace",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f68db16de55e80015feeef6?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=eoVsLXCH1BiODMVXyeoV5YMrN4k%3D"
-  },
-  {
-    "name": "SaaS - Snail as a Service",
-    "logo": null
-  },
-  {
-    "name": "Tear Bears",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5fc58466e152001516181b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=DLnHZ3cnU0DYRgJOlMJ6FAXtY0U%3D"
-  },
-  {
-    "name": "Garbage Snail Kids",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6b95b1210b9b001548850a?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=P8yKjfMDhjadMdTJu9qpi%2BkNbxM%3D"
-  },
-  {
-    "name": "Soak",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6aa07c42af490015716f7e?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=qrPexgCtAJhxB1ZgAUAtAn3P4io%3D"
-  },
-  {
-    "name": "Wannabees",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f4472dc2281b80015c74343?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=GH01RqlyFGbJi%2BQSmSZdzNqBiBI%3D"
-  },
-  {
-    "name": "I Make Honey Moves",
-    "logo": null
-  },
-  {
-    "name": "Mace Jam 2: A New Legabee",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5ae2ecb117220015809655?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=OesitoANQ6e9h4MXpCbX2RmPF0s%3D"
-  },
-  {
+    "key": "1cf057132daa4eb5852b2112142254a2",
     "name": "1337corp",
-    "logo": null
+    "selectName": "1337corp (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "4 - 2"
   },
   {
-    "name": "Silver Smurfers",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f46f93a2b35eb0015aa1f05?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=pQWG3VWVhiXMpfZD34ytCKJPacg%3D"
+    "key": "b63ac30c1f743ffe1060e01a10bca7b9",
+    "name": "ANALYZE. STRATEGIZE. SUCCEED.",
+    "selectName": "ANALYZE. STRATEGIZE. SUCCEED. (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5c399a550195001576e096?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=B9p4zbo%2BaMPbnltPqWXmpempf4A%3D",
+    "record": "4 - 2"
   },
   {
-    "name": "MEAT",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f627674689f0d0015177e53?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=FPMgfPNvd2b0m37iZkw4SQeEM%2Bo%3D"
+    "key": "002720455f13502dcd6775041b3c744e",
+    "name": "Absolutely Crazy About Beans",
+    "selectName": "Absolutely Crazy About Beans (East)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "2 - 3"
   },
   {
-    "name": "Hive Fives",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6d5eff6a81750015e76465?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=4L97KtNrpbXFyU40xqsQ9LMHir8%3D"
+    "key": "017e91393d2c6d302065ae399927c6c6",
+    "name": "Bee-FFs",
+    "selectName": "Bee-FFs (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f50ed93bbdae30015a6d158?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=fV4CekUqLEHOnspivqjTrNYd9LM%3D",
+    "record": "5 - 1"
   },
   {
+    "key": "26c27679f2f11d77d64acc3e4f999977",
+    "name": "Berry Brethren",
+    "selectName": "Berry Brethren (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f58f0c51bab4100155c58ea?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=GuFxEyPbnqCoTgxDtVwMZl1fvBU%3D",
+    "record": "1 - 4"
+  },
+  {
+    "key": "ee238badd4d57e9db4e583af81179ce6",
     "name": "Blobby",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f530cb88d10b40015e6baa7?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=At0Is%2FLtB3vqyBIJsxbv9Z7Tpd8%3D"
+    "selectName": "Blobby (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f530cb88d10b40015e6baa7?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=vn7SP8wy5jvOLLJ50NTUlcqDLPw%3D",
+    "record": "3 - 3"
   },
   {
-    "name": "Late Night Ranked",
-    "logo": null
-  },
-  {
-    "name": "Cats Rule Everything Around Me",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f67fe939ad53e00155a02c1?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=CVDMoz76aewjvqN8bUh9NrKMY10%3D"
-  },
-  {
-    "name": "Forming, Storming, Norming, and SWARMING",
-    "logo": null
-  },
-  {
-    "name": "Death of a Snailsman",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f501294a1197c001584161a?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=848jScr3Iz8UnBF%2B3rfAjrEw9TY%3D"
-  },
-  {
-    "name": "The Bee Team",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f69525ac9db5100154c2449?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=kqwQflkEXS4wxHxuCHrwtI8TpiM%3D"
-  },
-  {
-    "name": "No u bee Queen",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f4d5f69e231c800158e20aa?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=Q4Rwn0wCWyXlEY7A1Ev3jyJSYx8%3D"
-  },
-  {
-    "name": "Cross-Platform Disadvantaged Switch Players",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6c057abca37e0015223b64?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=%2FEzrTH9BbzZELxMFSdgGWEgxqJo%3D"
-  },
-  {
+    "key": "1598154be6e68081e99a0a78754dbc39",
     "name": "Boom Box",
-    "logo": null
+    "selectName": "Boom Box (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "1 - 3"
   },
   {
-    "name": "Snailin' Palin",
-    "logo": null
+    "key": "cfea4456a5f5f9a04f43c6019a5f8882",
+    "name": "Cats Rule Everything Around Me",
+    "selectName": "Cats Rule Everything Around Me (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f67fe939ad53e00155a02c1?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=ycXR2KjSaz1OcMKnKNfTc635huQ%3D",
+    "record": "3 - 3"
   },
   {
-    "name": "Pork Chop Express \"it's all in the reflexes\"",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6a3e70c9db5100154ce533?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=iBhPNfEI6nUjTE8CB406Dmy5I4A%3D"
+    "key": "96136dc00221d25b78f8cae7134ed78a",
+    "name": "Cross-Platform Disadvantaged Switch Players",
+    "selectName": "Cross-Platform Disadvantaged Switch Players (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6c057abca37e0015223b64?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=ZWOPGaLHSJ5ahUq5%2BbmGkchsOIQ%3D",
+    "record": "2 - 4"
   },
   {
-    "name": "Dave's Killer Queen",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5b0ec1b11722001580a90b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=2gWmurbBI615YUxoySdlLkzM3Fw%3D"
+    "key": "0998b6c963ee066ac9e8fa60d38efffc",
+    "name": "D.E.S.K. Duty",
+    "selectName": "D.E.S.K. Duty (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6bb9421cf5d60015c64a4d?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=iPGUmUWBnnPKsZBgm5O2UhAU6Ck%3D",
+    "record": "0 - 5"
   },
   {
-    "name": "The Ping Horizon",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f65d7b877aeaf0015271b05?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=fXLrq%2Bbjk%2BmshFj8oXIh%2FnfuDHs%3D"
-  },
-  {
-    "name": "The Bridge Crew",
-    "logo": null
-  },
-  {
-    "name": "Number Of The BEES",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f461758b3d4f00015fcabd9?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=cE%2BSQqzzpZxsltYxdCRl7M%2Bka0g%3D"
-  },
-  {
+    "key": "73982e774237b2336ca0692696ec7233",
     "name": "Daggerz SC",
-    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6bf42e210b9b001548e263?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605420109&Signature=VzJaxEkG5RBtNt9XTUrM7JUETLU%3D"
+    "selectName": "Daggerz SC (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6bf42e210b9b001548e263?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=1MscdcFbmvwXFI%2FtmOsqrxlvlls%3D",
+    "record": "0 - 5"
+  },
+  {
+    "key": "7039cb5bd362b6e053af01b44d993b22",
+    "name": "Dame Nace",
+    "selectName": "Dame Nace (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f68db16de55e80015feeef6?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=COeVn8MGx%2B%2FAS2PIrR2CO5zSNIs%3D",
+    "record": "6 - 0"
+  },
+  {
+    "key": "5fc5f626cb80937df61fb8d7694e75ce",
+    "name": "Dave's Killer Queen",
+    "selectName": "Dave's Killer Queen (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5b0ec1b11722001580a90b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=uTlV%2Ftxv4udR2Fh9afi1mf5zkh8%3D",
+    "record": "1 - 5"
+  },
+  {
+    "key": "d80e8476a8b0758f29384e9c4783a610",
+    "name": "Death of a Snailsman",
+    "selectName": "Death of a Snailsman (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f501294a1197c001584161a?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=1uvyKl%2B3F2j7CQjpGf5MF292WHw%3D",
+    "record": "3 - 3"
+  },
+  {
+    "key": "0f0da0a9e1367d3771ea73b273ac4966",
+    "name": "Dunkaroos",
+    "selectName": "Dunkaroos (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6a97b110c01800158abe04?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=CP9dJBzT2fBmY1kFcMeTNz%2Fhz68%3D",
+    "record": "1 - 5"
+  },
+  {
+    "key": "2c4e252da82d9d91a709e3b92355fbf7",
+    "name": "Eat Toast House Flippers",
+    "selectName": "Eat Toast House Flippers (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f45b26382188900156d7e58?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=lKIpIjOkYK0sqdOCUaZL8%2BQILVA%3D",
+    "record": "0 - 5"
+  },
+  {
+    "key": "1c96cb37446fbf875ee47380d850cd1a",
+    "name": "Forming, Storming, Norming, and SWARMING",
+    "selectName": "Forming, Storming, Norming, and SWARMING (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "3 - 3"
+  },
+  {
+    "key": "8a588fbbb3b5e1b83c53c18892766026",
+    "name": "Forming, Storming, Norming, and SWARMING",
+    "selectName": "Forming, Storming, Norming, and SWARMING (East)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "0 - 6"
+  },
+  {
+    "key": "e5a6da3090728b311b224c344e2b3407",
+    "name": "Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang ",
+    "selectName": "Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang Gang  (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f655af777aeaf0015268550?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=BBT13cvbn4IilZ9nXtOXD3D%2BZC0%3D",
+    "record": "5 - 0"
+  },
+  {
+    "key": "937f9abcc1fb5426b7c7026c31ce9986",
+    "name": "Garbage Snail Kids",
+    "selectName": "Garbage Snail Kids (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6b95b1210b9b001548850a?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=ztEogSkyXjc75CrcX%2B%2BPr79rMfY%3D",
+    "record": "5 - 1"
+  },
+  {
+    "key": "3b4075bd6c1e703f7e6b574528b5a26a",
+    "name": "Gas Station Pizza Party",
+    "selectName": "Gas Station Pizza Party (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5f8c5cf145ea00150333af?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=g2ArOwXZP1xggGcHAwmTPcMyyVg%3D",
+    "record": "3 - 3"
+  },
+  {
+    "key": "3593561f937ea70049d900e277593c35",
+    "name": "Gen 10 for a Good Time",
+    "selectName": "Gen 10 for a Good Time (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f57cd5d9ddf880015de05cf?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=8lNXXb0Xx4dYS5YqDbO3tPm%2BnWY%3D",
+    "record": "5 - 0"
+  },
+  {
+    "key": "00c3a2d73e6b002edb8e3cb66676c55a",
+    "name": "Hive Fives",
+    "selectName": "Hive Fives (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6d5eff6a81750015e76465?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=YkUfIDalOIQ2CcrUW3XUSrI7PwI%3D",
+    "record": "3 - 2"
+  },
+  {
+    "key": "9413db4dd301d604bce9fc20c318fef7",
+    "name": "Hivemates",
+    "selectName": "Hivemates (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f677624ffd9360015218444?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=wjnzcKbLj0Nei3QuPYrKCDOaY3Y%3D",
+    "record": "2 - 4"
+  },
+  {
+    "key": "80fd258e207e88c8e686321815e27223",
+    "name": "Honeys of the Hive",
+    "selectName": "Honeys of the Hive (East)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "4 - 1"
+  },
+  {
+    "key": "745f3226c0fd022a69204925a99f4e25",
+    "name": "I Make Honey Moves",
+    "selectName": "I Make Honey Moves (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "4 - 2"
+  },
+  {
+    "key": "9b03e9bd9bbf31d5c7bfb89d5c979acf",
+    "name": "Late Night Ranked",
+    "selectName": "Late Night Ranked (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "3 - 3"
+  },
+  {
+    "key": "d1464638bf07e5dc03b6e5daa5cef74c",
+    "name": "MEAT",
+    "selectName": "MEAT (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f627674689f0d0015177e53?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=siLZDAFABDeBx0dhqG6HqvTbh40%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "40bf452d0fbce6b3bedfc61f772c5cdf",
+    "name": "Mace Jam 2: A New Legabee",
+    "selectName": "Mace Jam 2: A New Legabee (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5ae2ecb117220015809655?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=quLrkAhK%2Fk0A2b97RhycElmVKx8%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "cb4d4b9b260d9773a7a924186631d8e4",
+    "name": "My Whole Stack",
+    "selectName": "My Whole Stack (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f446810564d38001528f951?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=ULmaSp9zLqmABoFrkEj9rdYG92g%3D",
+    "record": "5 - 1"
+  },
+  {
+    "key": "edc30720d61459b70f6e8fea3a2da964",
+    "name": "No u bee Queen",
+    "selectName": "No u bee Queen (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f4d5f69e231c800158e20aa?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=sbXKuh7Z9SnVVjwpgC7vv1Wwsj0%3D",
+    "record": "2 - 4"
+  },
+  {
+    "key": "9f678db9d17ab851c200f5ca57373c79",
+    "name": "Number Of The BEES",
+    "selectName": "Number Of The BEES (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f461758b3d4f00015fcabd9?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=YCMsHYib4Uy1S64M7sV%2BBJFQLOw%3D",
+    "record": "0 - 6"
+  },
+  {
+    "key": "c4bda56a57ec88aff7b5aa0fdb0e3371",
+    "name": "OnlyFlaps",
+    "selectName": "OnlyFlaps (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f627842ae36730015e5b085?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=cNGQURsCCn0wIaxksx59BmvX5jk%3D",
+    "record": "4 - 1"
+  },
+  {
+    "key": "efd0e4f0c7458c37574c2d8ea5138c96",
+    "name": "Penguin Peeps",
+    "selectName": "Penguin Peeps (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5a957a28e96b0015a9f8dc?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=UmD9JRERLe9mQS0vQTI4Ik1SVzs%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "42a33d6b2eebf1496a6578e51d0ce558",
+    "name": "Pork Chop Express \"it's all in the reflexes\"",
+    "selectName": "Pork Chop Express \"it's all in the reflexes\" (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6a3e70c9db5100154ce533?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=1TR%2Bp5aFEN45nW%2BhfPAVrP%2BCszI%3D",
+    "record": "1 - 5"
+  },
+  {
+    "key": "103736203050bc7c7d2b72028d9ba447",
+    "name": "QuaranQueen",
+    "selectName": "QuaranQueen (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6379364dee8000158839e1?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=zkPJgAO0Y4qCgdbX62%2FL6K5PizI%3D",
+    "record": "2 - 4"
+  },
+  {
+    "key": "5a92c7e3d9666efbdfe6c6d3cb9755fb",
+    "name": "SaaS - Snail as a Service",
+    "selectName": "SaaS - Snail as a Service (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "6 - 0"
+  },
+  {
+    "key": "721853ebaf902a8c718df3ddee19ae3b",
+    "name": "Silver Smurfers",
+    "selectName": "Silver Smurfers (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f46f93a2b35eb0015aa1f05?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=vPAmH4YyQ27hFSVd9h7ehxmseow%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "f7dd3a797c9bad968d17546803dd83f7",
+    "name": "Snailin' Palin",
+    "selectName": "Snailin' Palin (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "1 - 4"
+  },
+  {
+    "key": "a8c63318ca9357fdcb069636e07f2855",
+    "name": "Soak",
+    "selectName": "Soak (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6aa07c42af490015716f7e?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=%2B8SnQvghQOzOfAcvh32BqxG%2Bp%2FM%3D",
+    "record": "4 - 0"
+  },
+  {
+    "key": "42bc940aabaac44915af3e9c4ef36564",
+    "name": "Tear Bears",
+    "selectName": "Tear Bears (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5fc58466e152001516181b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=mfYz%2BzndZY9IqujNyILsZRXGzmY%3D",
+    "record": "5 - 0"
+  },
+  {
+    "key": "e4e6707848887a84c2e6e0aae70991b3",
+    "name": "Tear Bears",
+    "selectName": "Tear Bears (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f5fc809f145ea0015034c52?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=JVZ0jQhgmV5FyqEde9IP%2BpeXJgs%3D",
+    "record": "2 - 4"
+  },
+  {
+    "key": "9212757d5af7384e217df4579ab52735",
+    "name": "The Bee Team",
+    "selectName": "The Bee Team (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f69525ac9db5100154c2449?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=c7kleipf6BpB9SMcbTyAYV%2FEqbI%3D",
+    "record": "2 - 3"
+  },
+  {
+    "key": "7023ec89d4fe1f7d0fdae42cbf83feb8",
+    "name": "The Bridge Crew",
+    "selectName": "The Bridge Crew (West)",
+    "logo": "https://www.indygamingleague.com/static/media/igl_logo.d24d9c2f.png",
+    "record": "0 - 5"
+  },
+  {
+    "key": "619c857f47c5ca08d2562917e9853d1e",
+    "name": "The Ping Horizon",
+    "selectName": "The Ping Horizon (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f65d7b877aeaf0015271b05?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=5wtLxfjzkVzlREKpEuonGlw7KRE%3D",
+    "record": "0 - 6"
+  },
+  {
+    "key": "957d1f8b5765bf6afc8a58b4b29d8936",
+    "name": "This Is Your Queen?",
+    "selectName": "This Is Your Queen? (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f63331de748ec001547cb49?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=c%2BPq%2BmevTeaafXQWqiEXZ5gIigg%3D",
+    "record": "2 - 3"
+  },
+  {
+    "key": "d87d2d0f6b8de2ae2c31d90fb164516c",
+    "name": "To Bean or Not To Bean",
+    "selectName": "To Bean or Not To Bean (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f694c230fe9200015861350?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=R3wqBLnnONGHZElJVdet32Xjkvk%3D",
+    "record": "4 - 1"
+  },
+  {
+    "key": "97fc309a28cd319f9ea2a356ec31dde7",
+    "name": "Wannabees",
+    "selectName": "Wannabees (West)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f4472dc2281b80015c74343?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=ACXiuS%2FpiXh2OZP1mlePbqa76KY%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "e0725a2a40686024e04753780f9ffe15",
+    "name": "Whisky Beesness",
+    "selectName": "Whisky Beesness (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f55ab8aa3972b001551b52b?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=g2oqkK5qysLTTdTrXP2dRU6VCx0%3D",
+    "record": "4 - 2"
+  },
+  {
+    "key": "9375e94887cbee088b044c7d2813fd82",
+    "name": "Yeethaüs",
+    "selectName": "Yeethaüs (East)",
+    "logo": "https://igl-teamlogopics.s3.amazonaws.com/5f6400dacf665f00152db6b7?AWSAccessKeyId=AKIATI2Y2CGJ5H32CKWW&Expires=1605463341&Signature=3jvYi8T%2FUGzj4l1CDxtt6zExJ3s%3D",
+    "record": "2 - 4"
   }
 ]

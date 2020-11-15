@@ -103,6 +103,13 @@ const StyledNest = styled(Nest)`
   top: -20px;
 `
 
+const Logo = styled.div`
+  img {
+    max-height: 4rem;
+    border-radius: 15%;
+  }
+`
+
 function printResultsRow (scores, activeSet, key) {
   return scores.map((x, i) => {
     const wonSet = x >= 3
@@ -123,7 +130,10 @@ export default ({
   topName,
   bottomName,
   title,
-  info
+  info,
+  topLogo,
+  bottomLogo,
+  showLogos
 }) => {
   const blueScore = blueCount.filter(x => x >= 3).length
   const goldScore = goldCount.filter(x => x >= 3).length
@@ -131,6 +141,14 @@ export default ({
   return (
     <Container>
       <TeamBoxBlue>
+        { showLogos
+          ? (
+            <Logo>
+              <img src={topLogo} alt='top logo' />
+            </Logo>
+          )
+          : null }
+
         <TeamNameContainer>
           <TeamName>{topName}</TeamName>
           <TeamSub>{title}</TeamSub>
@@ -151,6 +169,13 @@ export default ({
           <TeamName>{bottomName}</TeamName>
           <TeamSub>{info}</TeamSub>
         </TeamNameContainer>
+        { showLogos
+          ? (
+            <Logo>
+              <img src={bottomLogo} alt='bottom logo' />
+            </Logo>
+          )
+          : null }
       </TeamBoxGold>
     </Container>
   )
