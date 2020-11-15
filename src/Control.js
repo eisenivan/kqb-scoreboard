@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Redirect } from 'react-router-dom'
-import ScoreBoard from './elements/ScoreBoard'
+import ScoreBoard from './elements/FullScoreBoard'
 import { useScoreboard, firebase } from './hooks/firebase'
 import './App.css'
 
@@ -116,18 +116,18 @@ function App (props) {
           <br /><br />
           <div>
             <label>Show title
-              <input name="showTitle" type="checkbox" checked={typeof showTitle !== 'undefined' ? showTitle : false} onChange={(e) => setShowTitle(e.target.checked)} />
+              <input name='showTitle' type='checkbox' checked={typeof showTitle !== 'undefined' ? showTitle : false} onChange={(e) => setShowTitle(e.target.checked)} />
             </label>
             <br /><br />
-            <input value={title ? title : ''} onChange={(e) => setTitle(e.target.value)} />
+            <input value={title || ''} onChange={(e) => setTitle(e.target.value)} />
           </div>
           <br /><br />
           <div>
             <label>Show Info
-              <input name="showInfo" type="checkbox" checked={typeof showInfo !== 'undefined' ? showInfo : false} onChange={(e) => setShowInfo(e.target.checked)} />
+              <input name='showInfo' type='checkbox' checked={typeof showInfo !== 'undefined' ? showInfo : false} onChange={(e) => setShowInfo(e.target.checked)} />
             </label>
             <br /><br />
-            <input value={info ? info : ''} onChange={(e) => setInfo(e.target.value)} />
+            <input value={info || ''} onChange={(e) => setInfo(e.target.value)} />
           </div>
         </div>
       </div>
