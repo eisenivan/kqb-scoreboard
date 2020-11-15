@@ -52,12 +52,13 @@ const TeamName = styled.span`
 const TeamSub = styled(TeamName)`
   font-size: 1rem;
   display: block;
+  font-style: italic;
 `
 
 const Scoreboard = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   flex: 1;
 `
 
@@ -70,8 +71,8 @@ const Scores = styled.div`
 const BlueScores = styled(Scores)`
   background-color: ${blue};
   border-color: ${darkBlue};
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   border-bottom-color: white;
   border-bottom-width: 0.1rem;
 `
@@ -79,8 +80,8 @@ const BlueScores = styled(Scores)`
 const GoldScores = styled(Scores)`
   background-color: ${gold};
   border-color: ${darkGold};
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   border-top-color: white;
   border-top-width: 0.1rem;
 `
@@ -88,8 +89,9 @@ const GoldScores = styled(Scores)`
 const SetResult = styled.div`
   color: ${({ active }) => active ? textColor : textColor};
   padding: 0.25rem 0.55rem;
-  font-weight: ${({ active }) => active ? 800 : 100};
-   border-radius: 50%;
+  font-weight: ${({ active }) => active ? 800 : 400};
+  border-radius: 50%;
+  margin: 0.15rem;
 `
 
 const WinningSetResult = styled(SetResult)`
@@ -101,15 +103,15 @@ const StyledNest = styled(Nest)`
   top: -20px;
 `
 
-function printResultsRow (scores, activeSet) {
+function printResultsRow (scores, activeSet, key) {
   return scores.map((x, i) => {
     const wonSet = x >= 3
     const isActive = activeSet === i
 
     if (wonSet) {
-      return <WinningSetResult active={isActive}>{x}</WinningSetResult>
+      return <WinningSetResult key={`${x}-${i}-${key}`} active={isActive}>{x}</WinningSetResult>
     } else {
-      return <SetResult active={isActive}>{x}</SetResult>
+      return <SetResult key={`${x}-${i}-${key}`} active={isActive}>{x}</SetResult>
     }
   })
 }
@@ -137,10 +139,10 @@ export default ({
       </TeamBoxBlue>
       <Scoreboard>
         <BlueScores>
-          { printResultsRow(blueCount, activeSet) }
+          { printResultsRow(blueCount, activeSet, 'blue') }
         </BlueScores>
         <GoldScores>
-          { printResultsRow(goldCount, activeSet) }
+          { printResultsRow(goldCount, activeSet, 'gold') }
         </GoldScores>
       </Scoreboard>
       <TeamBoxGold>

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 const ScoreItem = ({ value }) => (
   <span className={value >= 3 ? 'winner' : ''}>{value}</span>
@@ -12,14 +11,6 @@ const ScoreRow = ({ scores = [], activeSet, id }) => scores.map((x, i) => {
     </td>
   )
 })
-
-const TeamBox = ({ children }) => (
-  <div>{children}</div>
-)
-
-const StyledTeamBox = styled(TeamBox)`
-  padding: 20px;
-`
 
 export default ({ goldCount, blueCount, activeSet, topName, bottomName }) => (
   <div style={{ display: 'flex', alignItems: 'center' }}>
