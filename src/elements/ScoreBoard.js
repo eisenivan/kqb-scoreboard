@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import Nest from './Nest'
 
-const blue = '#75AEFF'
-const darkBlue = '#185DCD'
-const gold = '#FFE481'
-const darkGold = '#FFC704'
+const blue = '#1685f8'
+const darkBlue = '#1167C1'
+const gold = '#faeb2c'
+const darkGold = '#BAAF21'
+const highlight = '#f52789'
+const textColor = '#333'
 
 const Container = styled.div`
   display: flex;
   align-items: center;
+  width: 90vw;
+  font-family: 'Lato', sans-serif;
 `
 
 const TeamBox = styled.div`
@@ -21,6 +25,7 @@ const TeamBox = styled.div`
   justify-content: space-between;
   align-items: center;
   min-width: 400px;
+  flex: 8;
 `
 
 const TeamBoxBlue = styled(TeamBox)`
@@ -38,9 +43,8 @@ const TeamNameContainer = styled.div`
 `
 
 const TeamName = styled.span`
-  color: white;
+  color: ${textColor};
   font-size: 1.5rem;
-  font-family: 'Indie Flower', cursive;
   font-weight: 700;
   line-height: 1.4rem;
 `
@@ -54,6 +58,7 @@ const Scoreboard = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
+  flex: 1;
 `
 
 const Scores = styled.div`
@@ -81,16 +86,33 @@ const GoldScores = styled(Scores)`
 `
 
 const SetResult = styled.div`
-  color: white;
-  padding: 0.25rem 0.75rem;
-  font-weight: 700;
-  font-style: italic;
+  color: ${({ active }) => active ? highlight : textColor};
+  padding: 0.25rem 0.55rem;
+  font-weight: ${({ active }) => active ? 900 : 300};
+   border-radius: 50%;
+`
+
+const WinningSetResult = styled(SetResult)`
+  background: ${highlight};
 `
 
 const StyledNest = styled(Nest)`
   position: relative;
   top: -20px;
 `
+
+function printResultsRow (scores, activeSet) {
+  return scores.map((x, i) => {
+    const wonSet = x >= 3
+    const isActive = activeSet === i
+
+    if (wonSet) {
+      return <WinningSetResult active={isActive}>{x}</WinningSetResult>
+    } else {
+      return <SetResult active={isActive}>{x}</SetResult>
+    }
+  })
+}
 
 export default ({
   goldCount,
@@ -115,10 +137,10 @@ export default ({
       </TeamBoxBlue>
       <Scoreboard>
         <BlueScores>
-          { blueCount.map(x => (<SetResult>{x}</SetResult>)) }
+          { printResultsRow(blueCount, activeSet) }
         </BlueScores>
         <GoldScores>
-          { goldCount.map(x => (<SetResult>{x}</SetResult>)) }
+          { printResultsRow(goldCount, activeSet) }
         </GoldScores>
       </Scoreboard>
       <TeamBoxGold>
