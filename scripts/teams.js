@@ -1,5 +1,6 @@
 const fs = require('fs')
 const md5 = require('md5')
+const sharp = require('sharp')
 const _ = require('lodash')
 const axios = require('axios').default
 
@@ -8,13 +9,16 @@ const downloadImage = async (url, path) => {
     const response = await axios({
       method: 'GET',
       url: url,
-      responseType: 'stream'
+      responseType: 'arraybuffer'
     })
 
-    await response.data.pipe(fs.createWriteStream(path))
+    console.log(`Resizing Image!`)
+    await sharp(response.data)
+      .resize(128)
+      .toFile(path)
+
     console.log('Successfully downloaded!')
   } catch (err) {
-    throw new Error(err)
   }
 }
 
