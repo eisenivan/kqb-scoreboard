@@ -139,7 +139,7 @@ function App (props) {
               </select>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img width='36px' src={topLogo} alt='team1 logo' />
+              { topLogo ? <img width='36px' src={topLogo} alt='team1 logo' /> : null }
               <input value={topName} onChange={(e) => setTopName(e.target.value)} />
               <input value={topLogo} placeholder='optional logo url' onChange={(e) => setTopLogo(e.target.value)} />
               <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
@@ -149,7 +149,7 @@ function App (props) {
 
           <div className='TeamBox'>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img width='36px' src={bottomLogo} alt='team1 logo' />
+              { bottomLogo ? <img width='36px' src={bottomLogo} alt='team1 logo' /> : null }
               <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
               <input value={bottomLogo} placeholder='optional logo url' onChange={(e) => setBottomLogo(e.target.value)} />
               <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
