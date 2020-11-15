@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './index.css'
 import Home from './Home'
 import App from './App'
+import EggBoard from './EggBoard'
 import Control from './Control'
 import * as serviceWorker from './serviceWorker'
 
@@ -19,6 +20,9 @@ ReactDOM.render(
       </Route>
       <Route exact path='/:id/control'>
         <Control />
+      </Route>
+      <Route exact path='/egg/:id'>
+        <EggBoard />
       </Route>
     </Switch>
   </Router>

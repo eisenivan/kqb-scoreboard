@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import QRCode from 'react-qr-code'
 import Draggable from 'react-draggable'
-// import ScoreBoard from './elements/ScoreBoard'
-import FullScoreBoard from './elements/FullScoreBoard'
+import ScoreBoard from './elements/ScoreBoard'
+// import FullScoreBoard from './elements/FullScoreBoard'
 import { useScoreboard } from './hooks/firebase'
 import './App.css'
 
@@ -36,7 +36,7 @@ function App (props) {
         ? (
           <Draggable>
             <div style={{ cursor: 'pointer' }}>
-              <FullScoreBoard
+              <ScoreBoard
                 goldCount={goldCount}
                 blueCount={blueCount}
                 activeSet={activeSet}
@@ -55,8 +55,8 @@ function App (props) {
       { !hideQr ? (
         <Draggable>
           <div className='QrBox' style={{ cursor: 'pointer' }}>
-            <a rel='noopener noreferrer' target='_blank' href={`${window.location.href}/control`}>Control Panel</a>
-            <QRCode value={`${window.location.href}/control`} size={96} />
+            <a rel='noopener noreferrer' target='_blank' href={`/${scoreboardId}/control`}>Control Panel</a>
+            <QRCode value={`/${scoreboardId}/control`} size={96} />
             <button onClick={() => setHideQr(true)}>Hide QR Code</button>
           </div>
         </Draggable>
@@ -65,8 +65,8 @@ function App (props) {
       { announcement ? (
         <Draggable>
           <div className='QrBox' style={{ cursor: 'pointer' }}>
-            <a rel='noopener noreferrer' target='_blank' href={`${window.location.href}/control`}>Control Panel</a>
-            <QRCode value={`${window.location.href}/control`} size={96} />
+            <a rel='noopener noreferrer' target='_blank' href={`/${scoreboardId}/control`}>Control Panel</a>
+            <QRCode value={`/${scoreboardId}/control`} size={96} />
             <button onClick={() => setHideQr(true)}>Hide QR Code</button>
           </div>
         </Draggable>
