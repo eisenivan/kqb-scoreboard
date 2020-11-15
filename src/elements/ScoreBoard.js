@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   width: 90vw;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 `
 
 const TeamBox = styled.div`
@@ -45,7 +45,7 @@ const TeamNameContainer = styled.div`
 const TeamName = styled.span`
   color: ${textColor};
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.4rem;
 `
 
@@ -86,9 +86,9 @@ const GoldScores = styled(Scores)`
 `
 
 const SetResult = styled.div`
-  color: ${({ active }) => active ? highlight : textColor};
+  color: ${({ active }) => active ? textColor : textColor};
   padding: 0.25rem 0.55rem;
-  font-weight: ${({ active }) => active ? 900 : 300};
+  font-weight: ${({ active }) => active ? 800 : 100};
    border-radius: 50%;
 `
 
