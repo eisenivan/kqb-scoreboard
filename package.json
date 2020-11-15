@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase deploy"
+    "get-teams": "node ./scripts/teams.js",
+    "deploy": "yarn build && npm run get-teams && firebase deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "axios": "^0.21.0"
   }
 }

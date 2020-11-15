@@ -45,6 +45,8 @@ function App (props) {
     return (<Redirect to='/' />)
   }
 
+  const teams = []
+
   const reset = async () => {
     await ref.set(defaultData)
   }
