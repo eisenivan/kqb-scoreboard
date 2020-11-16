@@ -31,6 +31,7 @@ const decrement = (arr, activeSet) => {
 
 function App (props) {
   const [teams, setTeams] = useState([])
+  const [simpleView, setSimpleView] = useState(false)
 
   useEffect(() => {
     window.fetch('/teams.json')
@@ -129,19 +130,23 @@ function App (props) {
       <div className='ControlContainer disable-dbl-tap-zoom'>
         <div className='ControlBox'>
           <h2>TEAM CONTROLS</h2>
+          <button onClick={() => setSimpleView(!simpleView)}>{ simpleView ? 'Advanced Mode' : 'Simple Mode' }</button>
+          <br /><br />
           <div className='TeamBox'>
             <div>
-              <select onChange={(e) => setTeamOneData(e.target.value)}>
-                <option>-- Populate Top Team --</option>
-                { teams.map((team) => (
-                  <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
-                )) }
-              </select>
+              { !simpleView ? (
+                <select onChange={(e) => setTeamOneData(e.target.value)}>
+                  <option>-- Populate Top Team --</option>
+                  { teams.map((team) => (
+                    <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
+                  )) }
+                </select>
+              ) : null }
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               { topLogo ? <img width='36px' src={topLogo} alt='team1 logo' /> : null }
               <input value={topName} onChange={(e) => setTopName(e.target.value)} />
-              <input value={topLogo} placeholder='optional logo url' onChange={(e) => setTopLogo(e.target.value)} />
+              <input type={simpleView ? 'hidden' : 'text'} value={topLogo} placeholder='optional logo url' onChange={(e) => setTopLogo(e.target.value)} />
               <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
               <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
             </div>
@@ -151,23 +156,46 @@ function App (props) {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               { bottomLogo ? <img width='36px' src={bottomLogo} alt='team1 logo' /> : null }
               <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
-              <input value={bottomLogo} placeholder='optional logo url' onChange={(e) => setBottomLogo(e.target.value)} />
+              <input type={simpleView ? 'hidden' : 'text'} value={bottomLogo} placeholder='optional logo url' onChange={(e) => setBottomLogo(e.target.value)} />
               <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
               <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
             </div>
             <div>
-              <select onChange={(e) => setTeamTwoData(e.target.value)}>
-                <option>-- Populate Bottom Team --</option>
-                { teams.map((team) => (
-                  <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
-                )) }
-              </select>
+              { !simpleView ? (
+                <select onChange={(e) => setTeamTwoData(e.target.value)}>
+                  <option>-- Populate Bottom Team --</option>
+                  { teams.map((team) => (
+                    <option key={team.key} value={JSON.stringify(team)}>{team.selectName}</option>
+                  )) }
+                </select>
+              )
+                : null }
+
             </div>
           </div>
-          <label>
+
+          { !simpleView ? (
+            <>
+              <br /><br />
+              <div>
+                <label>Blue Subtext&nbsp;
+                  <input value={title || ''} placeholder='Blue Subtext' onChange={(e) => setTitle(e.target.value)} />
+                </label>
+              </div>
+              <div>
+                <label>Gold Subtext&nbsp;
+                  <input value={info || ''} placeholder='Gold Subtext' onChange={(e) => setInfo(e.target.value)} />
+                </label>
+              </div>
+          </>
+          ) : null }
+
+          { !simpleView ? (
+            <label>
             Show logos
-            <input name='showLogos' type='checkbox' checked={typeof showLogos !== 'undefined' ? showLogos : false} onChange={(e) => setShowLogos(e.target.checked)} />
-          </label>
+              <input name='showLogos' type='checkbox' checked={typeof showLogos !== 'undefined' ? showLogos : false} onChange={(e) => setShowLogos(e.target.checked)} />
+            </label>
+          ) : null }
         </div>
 
         <div className='ControlBox'>
@@ -176,22 +204,6 @@ function App (props) {
           <button onClick={() => newSet()}>Add Set</button>
           <button onClick={() => removeSet()}>Remove Set</button>
           <button onClick={() => setActiveSet(activeSet + 1)}>{'>>'}</button>
-          <br /><br />
-          <div>
-            <label>Show title
-              <input name='showTitle' type='checkbox' checked={typeof showTitle !== 'undefined' ? showTitle : false} onChange={(e) => setShowTitle(e.target.checked)} />
-            </label>
-            <br /><br />
-            <input value={title || ''} onChange={(e) => setTitle(e.target.value)} />
-          </div>
-          <br /><br />
-          <div>
-            <label>Show Info
-              <input name='showInfo' type='checkbox' checked={typeof showInfo !== 'undefined' ? showInfo : false} onChange={(e) => setShowInfo(e.target.checked)} />
-            </label>
-            <br /><br />
-            <input value={info || ''} onChange={(e) => setInfo(e.target.value)} />
-          </div>
         </div>
       </div>
 

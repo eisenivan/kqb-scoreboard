@@ -44,13 +44,19 @@ const TeamNameContainer = styled.div`
 
 const TeamName = styled.span`
   color: ${textColor};
-  font-size: 1.5rem;
+  font-size: 1.6vw;
   font-weight: 800;
   line-height: 1.4rem;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 26vw;
+  height: 1.7rem;
 `
 
 const TeamSub = styled(TeamName)`
-  font-size: 1rem;
+  font-size: 1.3vw;
   display: block;
   font-style: italic;
 `
@@ -58,7 +64,7 @@ const TeamSub = styled(TeamName)`
 const Scoreboard = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 1.15rem;
+  font-size: 1.3vw;
   flex: 1;
 `
 
@@ -91,7 +97,7 @@ const SetResult = styled.div`
   padding: 0.25rem 0.55rem;
   font-weight: ${({ active }) => active ? 800 : 400};
   border-radius: 50%;
-  margin: 0.15rem;
+  margin: 0.2vw;
 `
 
 const WinningSetResult = styled(SetResult)`
