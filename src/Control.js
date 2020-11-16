@@ -75,9 +75,7 @@ function App (props) {
   const setGoldCount = async (value) => ref.update({ goldCount: value })
   const setBlueCount = async (value) => ref.update({ blueCount: value })
   const setShowLogos = async (value) => ref.update({ showLogos: value })
-  const setShowTitle = async (value) => ref.update({ showTitle: value })
   const setTitle = async (value) => ref.update({ title: value })
-  const setShowInfo = async (value) => ref.update({ showInfo: value })
   const setInfo = async (value) => ref.update({ info: value })
 
   const newSet = async () => {
@@ -147,8 +145,8 @@ function App (props) {
               { topLogo ? <img width='36px' src={topLogo} alt='team1 logo' /> : null }
               <input value={topName} onChange={(e) => setTopName(e.target.value)} />
               <input type={simpleView ? 'hidden' : 'text'} value={topLogo} placeholder='optional logo url' onChange={(e) => setTopLogo(e.target.value)} />
-              <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
-              <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
+              <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
+              <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
             </div>
           </div>
 
@@ -157,8 +155,8 @@ function App (props) {
               { bottomLogo ? <img width='36px' src={bottomLogo} alt='team1 logo' /> : null }
               <input value={bottomName} onChange={(e) => setBottomName(e.target.value)} />
               <input type={simpleView ? 'hidden' : 'text'} value={bottomLogo} placeholder='optional logo url' onChange={(e) => setBottomLogo(e.target.value)} />
-              <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
-              <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
+              <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
+              <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
             </div>
             <div>
               { !simpleView ? (

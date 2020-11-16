@@ -18,11 +18,11 @@ export default ({ goldCount, blueCount, activeSet, topName, bottomName }) => (
       <tbody>
         <tr className='ScoreRow ScoreRow_top'>
           <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__blue'>{topName}</td>
-          <ScoreRow id='top' scores={goldCount} activeSet={activeSet} />
+          <ScoreRow id='top' scores={blueCount} activeSet={activeSet} />
         </tr>
         <tr className='ScoreRow'>
           <td className='ScoreRow_heading ScoreRow_heading-black ScoreRow_heading-black__gold'>{bottomName}</td>
-          <ScoreRow id='bottom' scores={blueCount} activeSet={activeSet} />
+          <ScoreRow id='bottom' scores={goldCount} activeSet={activeSet} />
         </tr>
       </tbody>
     </table>
