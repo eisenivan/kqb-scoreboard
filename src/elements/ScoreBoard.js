@@ -44,7 +44,7 @@ const TeamNameContainer = styled.div`
 
 const TeamName = styled.span`
   color: ${textColor};
-  font-size: 1.6vw;
+  font-size: ${({ chars }) => `${1.8 - (chars / 11) / 10}vw`};
   font-weight: 800;
   line-height: 1.4rem;
   display: block;
@@ -157,7 +157,7 @@ export default ({
           : null }
 
         <TeamNameContainer>
-          <TeamName>{topName}</TeamName>
+          <TeamName chars={topName.length}>{topName}</TeamName>
           <TeamSub>{title}</TeamSub>
         </TeamNameContainer>
         <StyledNest score={blueScore} style={{ transform: 'scaleX(-1)' }} />
@@ -173,7 +173,7 @@ export default ({
       <TeamBoxGold>
         <StyledNest score={goldScore} />
         <TeamNameContainer>
-          <TeamName>{bottomName}</TeamName>
+          <TeamName chars={bottomName.length}>{bottomName}</TeamName>
           <TeamSub>{info}</TeamSub>
         </TeamNameContainer>
         { showLogos
