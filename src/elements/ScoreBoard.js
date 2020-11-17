@@ -41,7 +41,7 @@ const TeamNameContainer = styled.div`
 
 const TeamName = styled.span`
   color: ${textColor};
-  font-size: ${({ chars = 11 }) => `${1.8 - (chars / 11) / 10}vw`};
+  font-size: ${({ chars = 11 }) => `${1.8 - (chars / 11) / 6}vw`};
   font-weight: 800;
   line-height: 1.4rem;
   display: block;
