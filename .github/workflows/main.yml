@@ -29,7 +29,9 @@ jobs:
         run: npm run get-teams
       
       # Runs a single command using the runners shell
-      - name: Firebase Deploy
-        run: npm run deploy
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
         env:
-          ${{ secrets.FIREBASE_TOKEN }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
