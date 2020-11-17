@@ -133,7 +133,6 @@ export default ({
   bottomLogo,
   showLogos
 }) => {
-  console.log(goldCount)
   const blueScore = blueCount.filter(x => x >= 3).length
   const goldScore = goldCount.filter(x => x >= 3).length
 
