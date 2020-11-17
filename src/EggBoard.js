@@ -19,7 +19,6 @@ function App (props) {
     bottomName,
     title,
     showTitle,
-    announcement,
     showInfo,
     info,
     topLogo,
@@ -59,23 +58,11 @@ function App (props) {
         )
         : <h2>Loading...</h2> }
       { !hideQr ? (
-        <Draggable>
-          <div className='QrBox' style={{ cursor: 'pointer' }}>
-            <a rel='noopener noreferrer' target='_blank' href={`/${scoreboardId}/control`}>Control Panel</a>
-            <QRCode value={`/${scoreboardId}/control`} size={96} />
-            <button onClick={() => setHideQr(true)}>Hide QR Code</button>
-          </div>
-        </Draggable>
-      ) : null }
-
-      { announcement ? (
-        <Draggable>
-          <div className='QrBox' style={{ cursor: 'pointer' }}>
-            <a rel='noopener noreferrer' target='_blank' href={`/${scoreboardId}/control`}>Control Panel</a>
-            <QRCode value={`/${scoreboardId}/control`} size={96} />
-            <button onClick={() => setHideQr(true)}>Hide QR Code</button>
-          </div>
-        </Draggable>
+        <div className='QrBox' style={{ cursor: 'pointer' }}>
+          <a rel='noopener noreferrer' target='_blank' href={`/${scoreboardId}/control`}>Control Panel</a>
+          <QRCode value={`/${scoreboardId}/control`} size={96} />
+          <button onClick={() => setHideQr(true)}>Hide QR Code</button>
+        </div>
       ) : null }
     </div>
   )

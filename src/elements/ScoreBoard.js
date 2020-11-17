@@ -10,10 +10,11 @@ const highlight = '#f52789'
 const textColor = '#333'
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  width: 90vw;
+  width: 95vw;
   font-family: 'Open Sans', sans-serif;
+  display: grid;
+  grid-template-columns: auto min-content auto;
+  column-gap: 1rem;
 `
 
 const TeamBox = styled.div`
@@ -21,11 +22,8 @@ const TeamBox = styled.div`
   border: 0.25rem solid;
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 400px;
-  flex: 8;
+  display: grid;
+  grid-template-columns: auto auto auto;
 `
 
 const TeamBoxBlue = styled(TeamBox)`
@@ -44,7 +42,7 @@ const TeamNameContainer = styled.div`
 
 const TeamName = styled.span`
   color: ${textColor};
-  font-size: ${({ chars }) => `${1.8 - (chars / 11) / 10}vw`};
+  font-size: ${({ chars = 11 }) => `${1.8 - (chars / 11) / 10}vw`};
   font-weight: 800;
   line-height: 1.4rem;
   display: block;
@@ -56,22 +54,20 @@ const TeamName = styled.span`
 `
 
 const TeamSub = styled(TeamName)`
-  font-size: 1.3vw;
-  display: block;
+  font-size: 1.2vw;
   font-style: italic;
+  font-weight: 400;
 `
 
 const Scoreboard = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 1.3vw;
-  flex: 1;
+  justify-content: center;
 `
 
 const Scores = styled.div`
   display: flex;
   border: 0.25rem solid;
-  margin: 0 1rem;
 `
 
 const BlueScores = styled(Scores)`
@@ -98,6 +94,7 @@ const SetResult = styled.div`
   font-weight: ${({ active }) => active ? 800 : 400};
   border-radius: 50%;
   margin: 0.2vw;
+  font-size: 1.1rem;
 `
 
 const WinningSetResult = styled(SetResult)`

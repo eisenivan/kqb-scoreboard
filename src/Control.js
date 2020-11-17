@@ -32,7 +32,6 @@ const decrement = (arr, activeSet) => {
 function App (props) {
   const [teams, setTeams] = useState([])
   const [simpleView, setSimpleView] = useState(false)
-  const [, forceUpdate] = React.useState(0)
 
   useEffect(() => {
     window.fetch('/teams.json')
