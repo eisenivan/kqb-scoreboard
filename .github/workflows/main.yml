@@ -21,12 +21,15 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: NPM Install
-        run: npm i
+      - name: Yarn Install
+        run: yarn install
 
       # Runs a single command using the runners shell
       - name: Build Team Cache
-        run: npm run get-teams
+        run: yarn get-teams
+
+      - name: Build production bundle
+        run: yarn build
       
       # Runs a single command using the runners shell
       - name: Deploy to Firebase
