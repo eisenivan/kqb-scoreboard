@@ -10,7 +10,6 @@ const highlight = '#f52789'
 const textColor = '#333'
 
 const Container = styled.div`
-  width: 95vw;
   font-family: 'Open Sans', sans-serif;
   display: grid;
   grid-template-columns: auto min-content auto;
