@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "axios": "^0.21.0",
+    "firebase-tools": "^8.16.2",
     "lodash": "^4.17.20",
     "md5": "^2.3.0",
     "sharp": "^0.26.2"
