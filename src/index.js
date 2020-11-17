@@ -5,6 +5,7 @@ import './index.css'
 import Home from './Home'
 import App from './App'
 import EggBoard from './EggBoard'
+import GoldBoard from './GoldBoard'
 import Control from './Control'
 import * as serviceWorker from './serviceWorker'
 
@@ -23,6 +24,9 @@ ReactDOM.render(
       </Route>
       <Route exact path='/egg/:id'>
         <EggBoard />
+      </Route>
+      <Route exact path='/gold/:id'>
+        <GoldBoard />
       </Route>
     </Switch>
   </Router>
