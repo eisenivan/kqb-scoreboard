@@ -12,7 +12,7 @@ const Container = styled.div`
   font-family: 'Open Sans', sans-serif;
   display: grid;
   grid-template-columns: auto min-content auto;
-  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.5);
+  column-gap: 3rem;
 `
 
 const TeamBox = styled.div`
