@@ -22,6 +22,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        run: npm i
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
         run: npm run get-teams
       
       # Runs a single command using the runners shell
