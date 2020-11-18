@@ -107,6 +107,7 @@ const SetResult = styled.div`
   font-weight: ${({ active }) => active ? 800 : 400};
   font-size: 1.4rem;
   border: 1px solid rgba(20, 20, 20, 0.3);
+  box-shadow: inset 0 0 7px 0px rgba(0,0,0,0.2);
   position: relative;
   &:before {
     display: ${({ active }) => active ? 'block' : 'none'};
@@ -123,6 +124,7 @@ const SetResult = styled.div`
 
 const WinningSetResult = styled(SetResult)`
   background: ${({ color }) => color === 'blue' ? blue : gold};
+  box-shadow: none;
   color: #333;
 `
 
