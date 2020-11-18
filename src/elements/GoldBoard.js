@@ -5,7 +5,7 @@ const blue = '#5FB6D9'
 const darkBlue = '#3B9CD9'
 const gold = '#F2D541'
 const darkGold = '#F2B441'
-const highlight = '#D90404'
+// const highlight = '#D90404'
 const textColor = '#333'
 const green = '#00b140'
 
