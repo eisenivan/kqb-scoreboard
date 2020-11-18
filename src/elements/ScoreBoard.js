@@ -4,9 +4,9 @@ import Nest from './Nest'
 
 const blue = '#1685f8'
 const darkBlue = '#1167C1'
-const gold = '#faeb2c'
-const darkGold = '#BAAF21'
-const highlight = '#f52789'
+const gold = '#fdcb33'
+const darkGold = '#fdb833'
+const highlight = 'white'
 const textColor = '#333'
 
 const Container = styled.div`
