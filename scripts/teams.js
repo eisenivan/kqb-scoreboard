@@ -22,7 +22,12 @@ const downloadImage = async (url, path) => {
   }
 }
 
-const circuits = [{ label: 'West', id: '5f38191cd98a1a47bb52b6a2' }, { label: 'East', id: '5f38194bd98a1a47bb52b6a3' }]
+const circuits = [
+  { label: 'West Fall 2020', id: '5f38191cd98a1a47bb52b6a2' },
+  { label: 'East Fall 2020', id: '5f38194bd98a1a47bb52b6a3' },
+  { label: 'West Winter 2021', id: '5fa5862103288ded83f2f374' },
+  { label: 'East Winter 2021', id: '5fa5864b03288ded83f2f375' }
+]
 
 const teams = []
 const logoDir = './public/logos'
