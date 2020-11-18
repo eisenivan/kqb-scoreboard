@@ -7,6 +7,7 @@ const gold = '#F2D541'
 const darkGold = '#F2B441'
 const highlight = '#D90404'
 const textColor = '#333'
+const green = '#00b140'
 
 const Container = styled.div`
   font-family: 'Open Sans', sans-serif;
@@ -20,14 +21,42 @@ const TeamBox = styled.div`
   padding: 0.5rem 0.5rem 0;
   display: grid;
   grid-template-columns: auto auto auto;
+  position: relative;
+  border: 1px solid #444;
 `
 
 const TeamBoxBlue = styled(TeamBox)`
   background-color: ${blue};
+  padding-left: 2.5rem;
+  &:before {
+    content: '';
+    background-color: ${green};
+    height: 88px;
+    left: -32px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(-20deg);
+    width: 47px;
+    z-index: 9999;
+    border-right: 1px solid #444;
+  }
 `
 
 const TeamBoxGold = styled(TeamBox)`
   background-color: ${gold};
+  padding-right: 2.5rem;
+  &:before {
+    content: '';
+    background-color: ${green};
+    height: 88px;
+    right: -32px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(20deg);
+    width: 47px;
+    z-index: 9999;
+    border-left: 1px solid #444;
+  }
 `
 
 const TeamNameContainer = styled.div`
@@ -61,26 +90,27 @@ const Scoreboard = styled.div`
 
 const Scores = styled.div`
   display: flex;
+  background-color: #555;
+  color: white;
 `
 
 const BlueScores = styled(Scores)`
-  background-color: ${blue};
+  /* background-color: ${blue}; */
 `
 
 const GoldScores = styled(Scores)`
-  background-color: ${gold};
+  /* background-color: ${gold}; */
 `
 
 const SetResult = styled.div`
-  color: ${({ active }) => active ? textColor : textColor};
-  padding: 0.25rem 0.55rem;
+  padding: 0.25rem 0.75rem;
   font-weight: ${({ active }) => active ? 800 : 400};
-  margin: 0.2vw;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  border: 1px solid #333;
 `
 
 const WinningSetResult = styled(SetResult)`
-  background: ${highlight};
+  background: ${({ color }) => color === 'blue' ? blue : gold};
   color: white;
 `
 
@@ -114,7 +144,7 @@ function printResultsRow (scores, activeSet, key) {
     const isActive = activeSet === i
 
     if (wonSet) {
-      return <WinningSetResult key={`${x}-${i}-${key}`} active={isActive}>{x}</WinningSetResult>
+      return <WinningSetResult key={`${x}-${i}-${key}`} active={isActive} color={key}>{x}</WinningSetResult>
     } else {
       return <SetResult key={`${x}-${i}-${key}`} active={isActive}>{x}</SetResult>
     }
