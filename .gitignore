@@ -7,6 +7,7 @@
 
 /public/logos
 /public/teams.json
+/public/health.json
 
 # testing
 /coverage

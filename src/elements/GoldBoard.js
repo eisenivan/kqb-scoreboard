@@ -31,7 +31,7 @@ const TeamBoxBlue = styled(TeamBox)`
   &:before {
     content: '';
     background-color: ${green};
-    height: 88px;
+    height: 86px;
     left: -32px;
     position: absolute;
     top: 5px;
@@ -48,7 +48,7 @@ const TeamBoxGold = styled(TeamBox)`
   &:before {
     content: '';
     background-color: ${green};
-    height: 88px;
+    height: 86px;
     right: -32px;
     position: absolute;
     top: 5px;
@@ -114,8 +114,8 @@ const SetResult = styled.div`
     height: 2px;
     background-color: tomato;
     position: absolute;
-    top: ${({ color }) => (color === 'blue') ? '0px' : 'auto'};
-    bottom: ${({ color }) => (color === 'gold') ? '0px' : 'auto'};
+    top: ${({ color }) => (color === 'blue') ? '-1px' : 'auto'};
+    bottom: ${({ color }) => (color === 'gold') ? '-1px' : 'auto'};
     width: 100%;
     left: 0px;
   }

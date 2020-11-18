@@ -12,7 +12,7 @@ const downloadImage = async (url, path) => {
       responseType: 'arraybuffer'
     })
 
-    console.log(`Resizing Image!`)
+    console.log(`Resizing Image`)
     await sharp(response.data)
       .resize(128)
       .toFile(path)
@@ -53,9 +53,18 @@ const promises = circuits.map((circuit) => {
     .catch(error => console.log('Request failed', error))
 })
 
+const today = new Date()
+const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
+const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+const dateTime = date + ' ' + time
+
 Promise.all(promises)
   .then(() => {
     const sortedTeams = _.sortBy(teams, ['name'])
     fs.writeFileSync('./public/teams.json', JSON.stringify(sortedTeams, null, 2))
+    fs.writeFileSync('./public/health.json', JSON.stringify({
+      updated: dateTime,
+      teamCount: sortedTeams.length
+    }, null, 2))
     console.log('Team JSON updated')
   })
