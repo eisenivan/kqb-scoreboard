@@ -106,12 +106,24 @@ const SetResult = styled.div`
   padding: 0.25rem 0.75rem;
   font-weight: ${({ active }) => active ? 800 : 400};
   font-size: 1.4rem;
-  border: 1px solid #333;
+  border: 1px solid rgba(20, 20, 20, 0.3);
+  position: relative;
+  &:before {
+    display: ${({ active }) => active ? 'block' : 'none'};
+    content: '';
+    height: 2px;
+    background-color: tomato;
+    position: absolute;
+    top: ${({ color }) => (color === 'blue') ? '0px' : 'auto'};
+    bottom: ${({ color }) => (color === 'gold') ? '0px' : 'auto'};
+    width: 100%;
+    left: 0px;
+  }
 `
 
 const WinningSetResult = styled(SetResult)`
   background: ${({ color }) => color === 'blue' ? blue : gold};
-  color: white;
+  color: #333;
 `
 
 const Sets = styled.div`
@@ -146,7 +158,7 @@ function printResultsRow (scores, activeSet, key) {
     if (wonSet) {
       return <WinningSetResult key={`${x}-${i}-${key}`} active={isActive} color={key}>{x}</WinningSetResult>
     } else {
-      return <SetResult key={`${x}-${i}-${key}`} active={isActive}>{x}</SetResult>
+      return <SetResult key={`${x}-${i}-${key}`} active={isActive} color={key}>{x}</SetResult>
     }
   })
 }
