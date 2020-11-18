@@ -103,6 +103,7 @@ const WinningSetResult = styled(SetResult)`
 const StyledNest = styled(Nest)`
   position: relative;
   top: -20px;
+  font-size: 4rem;
 `
 
 const Logo = styled.div`

@@ -1,4 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Trophy = styled.span`
+  font-size: 3rem;
+  width: 100px;
+  text-align: center;
+`
 
 export default ({ score = 0, style }) => {
   switch (score) {
@@ -46,5 +53,8 @@ export default ({ score = 0, style }) => {
           <path d='M 16 32 C 9.319 32 3.883 26.564 3.883 19.884 C 3.883 13.252 9.122 0 16 0 C 22.878 0 28.117 13.252 28.117 19.884 C 28.115 26.564 22.68 32 16 32 Z' />
         </g><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /><g /></g><path d='M 887.7188720703125 322.2546691894531' /></svg>
       )
+
+    case 4:
+      return (<Trophy><span aria-label='trophy' role='img'>🏆</span></Trophy>)
   }
 }
