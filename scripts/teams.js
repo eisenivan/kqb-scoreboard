@@ -64,7 +64,9 @@ Promise.all(promises)
     fs.writeFileSync('./public/teams.json', JSON.stringify(sortedTeams, null, 2))
     fs.writeFileSync('./public/health.json', JSON.stringify({
       updated: dateTime,
-      teamCount: sortedTeams.length
+      teamCount: sortedTeams.length,
+      circutCount: circuits.length,
+      circuits
     }, null, 2))
     console.log('Team JSON updated')
   })
