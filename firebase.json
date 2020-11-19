@@ -15,6 +15,19 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "headers": [{
+      "source": "/health.json",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=60"
+      } ]
+    }, {
+      "source": "404.html",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "max-age=300"
+      } ]
+    } ]
   }
 }
