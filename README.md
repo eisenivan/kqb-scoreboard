@@ -2,3 +2,4 @@
 
 # Killer Queen Black Scoreboard
 
+![KQB Scoreboard](https://scoreboard-32078.web.app/)
