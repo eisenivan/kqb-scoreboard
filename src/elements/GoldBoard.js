@@ -31,7 +31,7 @@ const TeamBoxBlue = styled(TeamBox)`
   &:before {
     content: '';
     background-color: ${green};
-    height: 86px;
+    height: 88px;
     left: -32px;
     position: absolute;
     top: 5px;
@@ -48,7 +48,7 @@ const TeamBoxGold = styled(TeamBox)`
   &:before {
     content: '';
     background-color: ${green};
-    height: 86px;
+    height: 88px;
     right: -32px;
     position: absolute;
     top: 5px;
