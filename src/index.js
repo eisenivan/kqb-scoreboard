@@ -7,6 +7,7 @@ import App from './App'
 import EggBoard from './EggBoard'
 import GoldBoard from './GoldBoard'
 import Control from './Control'
+import StatsScreen from './StatsScreen'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
@@ -18,6 +19,9 @@ ReactDOM.render(
       </Route>
       <Route exact path='/:id'>
         <App />
+      </Route>
+      <Route exact path='/:id/stats'>
+        <StatsScreen />
       </Route>
       <Route exact path='/:id/control'>
         <Control />
