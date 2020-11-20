@@ -58,17 +58,14 @@ const promises = circuits.map((circuit) => {
     .catch(error => console.log('Request failed', error))
 })
 
-const today = new Date()
-const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate()
-const time = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
-const dateTime = `${date} ${time} UTC`
+const today = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
 
 Promise.all(promises)
   .then(() => {
     const sortedTeams = _.sortBy(teams, ['name'])
     fs.writeFileSync('./public/teams.json', JSON.stringify(sortedTeams, null, 2))
     fs.writeFileSync('./public/health.json', JSON.stringify({
-      updated: dateTime,
+      updated: `${today} ET`,
       teamCount: sortedTeams.length,
       circutCount: circuits.length,
       circuits
