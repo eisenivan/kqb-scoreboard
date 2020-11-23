@@ -129,13 +129,13 @@ function StatsScreen () {
           <TeamStatsCell>{blue.name}</TeamStatsCell>
           {
             Object.keys(blue.teamStats)
-              .map((key) => (<TeamStatsCell stat={key} winner={blue.teamStats[key] >= gold.teamStats[key]}>{blue.teamStats[key]}</TeamStatsCell>))
+              .map((key) => (<TeamStatsCell stat={key} winner={parseInt(blue.teamStats[key]) >= parseInt(gold.teamStats[key])}>{blue.teamStats[key]}</TeamStatsCell>))
           }
           <TeamStatsCell><img alt='gold logo' src={gold.logo} /></TeamStatsCell>
           <TeamStatsCell>{gold.name}</TeamStatsCell>
           {
             Object.keys(gold.teamStats)
-              .map((key) => (<TeamStatsCell stat={key} winner={gold.teamStats[key] >= blue.teamStats[key]}>{gold.teamStats[key]}</TeamStatsCell>))
+              .map((key) => (<TeamStatsCell stat={key} winner={parseInt(gold.teamStats[key]) >= parseInt(blue.teamStats[key])}>{gold.teamStats[key]}</TeamStatsCell>))
           }
         </TeamStatsContainer>
 
