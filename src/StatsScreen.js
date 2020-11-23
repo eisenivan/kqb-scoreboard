@@ -77,19 +77,19 @@ function StatsScreen () {
   const { id: scoreboardId } = useParams()
 
   const {
-    topName,
-    bottomName
+    topId,
+    bottomId
   } = useScoreboard(scoreboardId)
 
   useEffect(() => {
     window.fetch('/teams.json')
       .then(res => res.json())
       .then((data) => {
-        const blueTeam = data.find(x => x.name === topName)
+        const blueTeam = data.find(x => x.key === topId)
         setBlue(blueTeam)
-        setGold(data.find(x => x.name === bottomName))
+        setGold(data.find(x => x.key === bottomId))
       })
-  }, [bottomName, topName])
+  }, [bottomId, topId])
 
   if (typeof blue !== 'undefined' && typeof gold !== 'undefined') {
     // figure out category winners

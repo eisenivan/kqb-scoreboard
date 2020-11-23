@@ -23,8 +23,10 @@ function useScoreboard (id) {
   const [blueCount, setBlueCount] = React.useState([0])
   const [activeSet, setActiveSet] = React.useState(0)
   const [topName, setTopName] = React.useState('BLUE')
+  const [topId, setTopId] = React.useState('')
   const [topLogo, setTopLogo] = React.useState('')
   const [bottomName, setBottomName] = React.useState('GOLD')
+  const [bottomId, setBottomId] = React.useState('')
   const [bottomLogo, setBottomLogo] = React.useState('')
   const [title, setTitle] = React.useState(null)
   const [showLogos, setShowLogos] = React.useState(false)
@@ -58,6 +60,8 @@ function useScoreboard (id) {
               setShowTitle(doc.showTitle)
               setInfo(doc.info)
               setShowInfo(doc.showInfo)
+              setTopId(doc.topId)
+              setBottomId(doc.bottomId)
             } else {
               setError({ status: true, msg: 'Invalid key' })
             }
@@ -82,8 +86,10 @@ function useScoreboard (id) {
     blueCount,
     activeSet,
     topName,
+    topId,
     topLogo,
     bottomName,
+    bottomId,
     bottomLogo,
     showLogos,
     title,

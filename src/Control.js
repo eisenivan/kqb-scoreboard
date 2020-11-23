@@ -6,8 +6,10 @@ import './App.css'
 
 const defaultData = {
   topName: 'BLUE',
+  topId: '',
   topLogo: '',
   bottomName: 'GOLD',
+  bottomId: '',
   bottomLogo: '',
   goldCount: [0, 0, 0, 0, 0],
   blueCount: [0, 0, 0, 0, 0],
@@ -77,6 +79,8 @@ function App (props) {
   const setShowLogos = async (value) => ref.update({ showLogos: value })
   const setTitle = async (value) => ref.update({ title: value })
   const setInfo = async (value) => ref.update({ info: value })
+  const setTopId = async (value) => ref.update({ topId: value })
+  const setBottomId = async (value) => ref.update({ bottomId: value })
 
   const newSet = async () => {
     await ref.update({
@@ -114,6 +118,7 @@ function App (props) {
     await ref.update({ topName: teamData.name })
     await ref.update({ topLogo: teamData.logo })
     await ref.update({ title: teamData.record })
+    await ref.update({ topId: teamData.key })
   }
 
   const setTeamTwoData = async (teamJson) => {
@@ -121,6 +126,7 @@ function App (props) {
     await ref.update({ bottomName: teamData.name })
     await ref.update({ bottomLogo: teamData.logo })
     await ref.update({ info: teamData.record })
+    await ref.update({ bottomId: teamData.key })
   }
 
   return (
