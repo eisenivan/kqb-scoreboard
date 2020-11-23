@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const TeamStatsContainer = styled.div`
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: 1fr repeat(10, 2fr);
   background-color: #444;
   width: 90vw;
   margin-top: 2vw;
