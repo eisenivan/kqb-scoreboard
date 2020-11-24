@@ -4,6 +4,14 @@ import { useScoreboard } from './hooks/firebase'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
+const blue = '#1685f8'
+const gold = '#fdcb33'
+const first = '#b79a00'
+const second = 'silver'
+const third = 'sandybrown'
+const tableGrey = '#555'
+const highlight = 'rebeccapurple'
+
 const TeamStatsContainer = styled.div`
   margin: auto;
   display: grid;
@@ -18,11 +26,21 @@ const statWin = (winner, stat) => reverseCategories.indexOf(stat) > -1
   : winner
 
 const TeamStatsCell = styled.div`
-  background-color: ${({ winner, stat }) => (statWin(winner, stat))
-    ? 'rebeccapurple'
-    : '#555'};
-  border: 1px solid #333;
+  background-color: ${({ winner, stat, color = 'blue', forceColor }) => {
+    switch (true) {
+      case statWin(winner, stat):
+        return `${highlight};`
+
+      case forceColor:
+        return color === 'blue' ? `${blue};` : `${gold};`
+
+      default:
+        return `${tableGrey};`
+    }
+  }};
   color: white;
+  border: 1px solid #333;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,26 +64,39 @@ const PlayStatsContainer = styled.div`
   justify-content: center;
 `
 
+const PlayerStatsHeader = styled.div`
+  grid-area: header;
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: ${({ color }) => color === 'blue'
+    ? blue
+    : gold};
+  min-height: 2rem;
+`
+
 const TeamPlayerStatsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header";
 `
 
 const PlayerStatsCell = styled(TeamStatsCell)`
   background-color: ${({ rank }) => {
     switch (rank) {
       case 2:
-        return 'sandybrown'
+        return third
 
       case 1:
-        return 'grey'
+        return second
 
       case 0:
-        return '#b79a00'
+        return first
 
       default:
-        return '#555'
+        return null
     }
   }}
 `
@@ -141,6 +172,7 @@ function StatsScreen () {
 
         <PlayStatsContainer>
           <TeamPlayerStatsContainer>
+            <PlayerStatsHeader color='blue'>{blue.name}</PlayerStatsHeader>
             <PlayerStatsCell />
             { Object.keys(blue.players[0].stats).map((key) => (<PlayerStatsCell>{key.replace('/ Game', '')}</PlayerStatsCell>)) }
             {
@@ -155,6 +187,7 @@ function StatsScreen () {
             }
           </TeamPlayerStatsContainer>
           <TeamPlayerStatsContainer>
+            <PlayerStatsHeader color='gold'>{gold.name}</PlayerStatsHeader>
             <PlayerStatsCell />
             { Object.keys(gold.players[0].stats).map((key) => (<PlayerStatsCell>{key.replace('/ Game', '')}</PlayerStatsCell>)) }
             {
