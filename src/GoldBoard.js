@@ -37,7 +37,7 @@ function App (props) {
       { !loading
         ? (
           <Draggable>
-            <div style={{ cursor: 'pointer' }}>
+            <div style={{ cursor: 'pointer', overflow: 'hidden' }}>
               <ScoreBoard
                 goldCount={goldCount}
                 blueCount={blueCount}

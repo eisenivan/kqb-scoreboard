@@ -113,7 +113,7 @@ const SetResult = styled.div`
     display: ${({ active }) => active ? 'block' : 'none'};
     content: '';
     height: 2px;
-    background-color: tomato;
+    background: ${({ color }) => color === 'blue' ? blue : gold};
     position: absolute;
     top: ${({ color }) => (color === 'blue') ? '-1px' : 'auto'};
     bottom: ${({ color }) => (color === 'gold') ? '-1px' : 'auto'};
