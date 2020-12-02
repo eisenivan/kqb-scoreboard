@@ -6,11 +6,11 @@ import styled from 'styled-components'
 
 const blue = '#1685f8'
 const gold = '#fdcb33'
-const first = '#b79a00'
-const second = 'silver'
-const third = 'sandybrown'
+const first = '#b59520'
+const second = '#9a9a9a'
+const third = '#a06d42'
 const tableGrey = '#555'
-const highlight = 'rebeccapurple'
+const highlight = '#802879'
 
 const TeamStatsContainer = styled.div`
   margin: auto;
@@ -78,12 +78,17 @@ const PlayerStatsHeader = styled.div`
 
 const TeamPlayerStatsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: 11.5rem repeat(4, 5.5rem);
   grid-template-rows: auto;
   grid-template-areas: "header header header header header";
 `
 
 const PlayerStatsCell = styled(TeamStatsCell)`
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  
   background-color: ${({ rank }) => {
     switch (rank) {
       case 2:
