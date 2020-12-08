@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-remarkable'
 import styled from 'styled-components'
 
 const markdown = `
@@ -46,6 +46,6 @@ const DocsContainer = styled('div')`
 
 export default () => (
   <DocsContainer>
-    <ReactMarkdown children={markdown} />
+    <ReactMarkdown source={markdown} />
   </DocsContainer>
 )
