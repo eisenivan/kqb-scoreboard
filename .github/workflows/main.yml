@@ -1,9 +1,5 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
@@ -13,32 +9,40 @@ on:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Install Dependencies
+
+      - name: Yarn Install
         run: yarn install
-      - name: Build
+
+      - name: Build Team Cache
+        run: yarn get-teams
+
+      - name: Build production bundle
         run: yarn build
+
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: build
           path: build
+      
   deploy:
-    name: Deploy
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+        
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
           name: build
           path: build
+
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
