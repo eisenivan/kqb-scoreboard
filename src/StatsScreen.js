@@ -114,7 +114,9 @@ function StatsScreen () {
 
   const {
     topId,
-    bottomId
+    bottomId,
+    topName,
+    bottomName
   } = useScoreboard(scoreboardId)
 
   useEffect(() => {
@@ -162,13 +164,13 @@ function StatsScreen () {
               .map((key) => (<TeamStatsCell>{key}</TeamStatsCell>))
           }
           <TeamStatsCell><img alt='blue logo' src={blue.logo} /></TeamStatsCell>
-          <TeamStatsCell>{blue.name}</TeamStatsCell>
+          <TeamStatsCell>{topName}</TeamStatsCell>
           {
             Object.keys(blue.teamStats)
               .map((key) => (<TeamStatsCell stat={key} winner={parseInt(blue.teamStats[key]) >= parseInt(gold.teamStats[key])}>{blue.teamStats[key]}</TeamStatsCell>))
           }
           <TeamStatsCell><img alt='gold logo' src={gold.logo} /></TeamStatsCell>
-          <TeamStatsCell>{gold.name}</TeamStatsCell>
+          <TeamStatsCell>{bottomName}</TeamStatsCell>
           {
             Object.keys(gold.teamStats)
               .map((key) => (<TeamStatsCell stat={key} winner={parseInt(gold.teamStats[key]) >= parseInt(blue.teamStats[key])}>{gold.teamStats[key]}</TeamStatsCell>))
@@ -177,7 +179,7 @@ function StatsScreen () {
 
         <PlayStatsContainer>
           <TeamPlayerStatsContainer>
-            <PlayerStatsHeader color='blue'>{blue.name}</PlayerStatsHeader>
+            <PlayerStatsHeader color='blue'>{topName}</PlayerStatsHeader>
             <PlayerStatsCell />
             { Object.keys(blue.players[0].stats).map((key) => (<PlayerStatsCell>{key.replace('/ Game', '')}</PlayerStatsCell>)) }
             {
@@ -192,7 +194,7 @@ function StatsScreen () {
             }
           </TeamPlayerStatsContainer>
           <TeamPlayerStatsContainer>
-            <PlayerStatsHeader color='gold'>{gold.name}</PlayerStatsHeader>
+            <PlayerStatsHeader color='gold'>{bottomName}</PlayerStatsHeader>
             <PlayerStatsCell />
             { Object.keys(gold.players[0].stats).map((key) => (<PlayerStatsCell>{key.replace('/ Game', '')}</PlayerStatsCell>)) }
             {
