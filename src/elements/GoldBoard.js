@@ -21,6 +21,7 @@ const TeamBox = styled.div`
   padding: 0.5rem 0.5rem 0;
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-column-gap: 0.5rem;
   position: relative;
   border: 1px solid #444;
 `
