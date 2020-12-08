@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import { useParams, Redirect } from 'react-router-dom'
 import ScoreBoard from './elements/FullScoreBoard'
 import { useScoreboard, firebase } from './hooks/firebase'
@@ -20,6 +21,25 @@ const defaultData = {
   title: '',
   info: ''
 }
+
+const ButtonBox = styled.div`
+  button {
+    font-size: 1.6rem;
+  }
+`
+
+const BlueButtonBox = styled(ButtonBox)`
+  button {
+    background-color: blue;
+    color: white;
+  }
+`
+
+const GoldButtonBox = styled(ButtonBox)`
+  button {
+    background-color: gold;
+  }
+`
 
 const increment = (arr, activeSet) => {
   arr[activeSet] = arr[activeSet] + 1
@@ -212,17 +232,27 @@ function App (props) {
       { !loading
         ? (
         <>
-          <ScoreBoard
-            goldCount={goldCount}
-            blueCount={blueCount}
-            activeSet={activeSet}
-            topName={topName}
-            bottomName={bottomName}
-            showTitle={showTitle}
-            title={title}
-            showInfo={showInfo}
-            info={info}
-          />
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <BlueButtonBox>
+              <button onClick={() => setBlueCount(increment(blueCount, activeSet))}>+</button>
+              <button onClick={() => setBlueCount(decrement(blueCount, activeSet))}>-</button>
+            </BlueButtonBox>
+            <ScoreBoard
+              goldCount={goldCount}
+              blueCount={blueCount}
+              activeSet={activeSet}
+              topName={topName}
+              bottomName={bottomName}
+              showTitle={showTitle}
+              title={title}
+              showInfo={showInfo}
+              info={info}
+            />
+            <GoldButtonBox>
+              <button onClick={() => setGoldCount(increment(goldCount, activeSet))}>+</button>
+              <button onClick={() => setGoldCount(decrement(goldCount, activeSet))}>-</button>
+            </GoldButtonBox>
+          </div>
           <button onClick={() => reset()}>Reset</button>
         </>
         )
