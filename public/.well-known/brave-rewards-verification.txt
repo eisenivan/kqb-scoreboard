@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: beegame.rocks
+Token: eeb2ee9c1e6d65d45c34dfc6c6e0358ddddd82995bcc09ccf02bc4514508b3b8
