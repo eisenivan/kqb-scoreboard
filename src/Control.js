@@ -241,8 +241,8 @@ function App (props) {
               goldCount={goldCount}
               blueCount={blueCount}
               activeSet={activeSet}
-              topName={topName}
-              bottomName={bottomName}
+              topName={simpleView ? `${topName.slice(0, 6)}...` : topName}
+              bottomName={simpleView ? `${bottomName.slice(0, 6)}...` : bottomName}
               showTitle={showTitle}
               title={title}
               showInfo={showInfo}
